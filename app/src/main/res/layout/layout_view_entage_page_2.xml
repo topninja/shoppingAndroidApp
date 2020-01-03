@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_see_all"
+            android:visibility="visible"
+            android:background="@drawable/background_white_entage_blue_2"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/see_all"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:text="@string/see_all"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:civ_border_color="@color/gray0"
+                app:civ_border_width="0.5dp"
+                android:id="@+id/circle_image_1"
+                android:layout_centerVertical="true"
+                android:src="@color/entage_blue_2"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayouText"
+                android:layout_toEndOf="@+id/circle_image_1"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@+id/relLayout"
+                android:layout_marginEnd="3dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/item_name_1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/item_name_1"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray1"
+                    android:id="@+id/description_1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayout"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relLayout_followed"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/followed"
+                        android:text="@string/followed"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:gravity="center"
+                        android:background="@drawable/border_curve_entage_blue_1_ops"/>
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/notification"
+                        android:src="@drawable/ic_notification"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/followed"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:tint="@color/black"
+                        android:layout_alignTop="@+id/followed"
+                        android:layout_alignBottom="@+id/followed"
+                        android:background="@drawable/border_curve_entage_blue_1"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:id="@+id/follow"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:text="@string/follow"
+                    android:textColor="@drawable/text_color_entage_blue"
+                    android:background="@drawable/border_curve_entage_blue"
+                    android:textStyle="bold"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:baselineAligned="false">
+
+            <com.entage.nrd.entage.Utilities.SqaureImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_1"
+                android:src="@color/entage_blue_2">
+            </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+            <com.entage.nrd.entage.Utilities.SqaureImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_2"
+                android:src="@color/entage_blue_2">
+            </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+            <com.entage.nrd.entage.Utilities.SqaureImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_3"
+                android:src="@color/entage_blue_2">
+            </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:baselineAligned="false">
+
+            <com.entage.nrd.entage.Utilities.SqaureImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_4"
+                android:src="@color/entage_blue_2">
+            </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+            <com.entage.nrd.entage.Utilities.SqaureImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:layout_marginEnd="5dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_5"
+                android:src="@color/entage_blue_2">
+            </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+            <com.entage.nrd.entage.Utilities.SqaureImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="33"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_6"
+                android:src="@color/entage_blue_2">
+            </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_divider_home_page"/>
+
+</LinearLayout>

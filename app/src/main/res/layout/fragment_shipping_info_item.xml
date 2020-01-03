@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_above="@+id/layout_bar_add_item">
+
+        <include layout="@layout/layout_wait_loading"/>
+
+        <include layout="@layout/layout_advices"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/entage_gray"
+            android:text="@string/item_location"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text1"
+                android:text="@string/select_country"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/countries_spinner"
+                android:layout_toEndOf="@+id/text1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/spinner_line_bottom_black"
+                android:layout_centerVertical="true">
+            </Spinner>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text2"
+                android:text="@string/select_city"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/city"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/text2"
+                android:layout_marginStart="10dp"
+                android:theme="@style/editText"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/error_named_city"
+                android:layout_below="@+id/city"
+                android:id="@+id/error1"
+                android:layout_marginStart="50dp"
+                android:textColor="@color/red"
+                android:textSize="12dp"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/gray1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/entage_gray"
+            android:text="@string/methods_receive_item"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/no_shipping_available"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:text="@string/no_shipping_available"
+                android:textColor="@color/black"
+                android:buttonTint="@color/entage_blue"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/no_shipping_available"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:id="@+id/info_location_item"
+                android:background="@drawable/border_curve_blue"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/image"
+                    android:layout_alignParentStart="true"
+                    android:tint="@drawable/text_color_blue"
+                    android:src="@drawable/ic_location"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_location_shipping_available"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@drawable/text_color_blue"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/yes_shipping_available"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:text="@string/yes_shipping_available"
+                android:textColor="@color/black"
+                android:buttonTint="@color/entage_blue"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/yes_shipping_available"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:id="@+id/selected_places"
+                android:background="@drawable/border_curve_blue"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/image0"
+                    android:layout_alignParentStart="true"
+                    android:tint="@drawable/text_color_blue"
+                    android:src="@drawable/ic_world"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_places_shipping_available"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image0"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@drawable/text_color_blue"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_choose_area"
+            android:id="@+id/error"
+            android:textColor="@color/red"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="7dp"
+            android:textSize="14sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_shipping_available"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/entage_gray"
+            android:text="@string/shipping_available"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_bar_add_item"/>
+
+</RelativeLayout>

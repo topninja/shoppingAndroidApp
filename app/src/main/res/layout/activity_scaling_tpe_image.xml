@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/snippet_top_bar"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray1"
+            android:id="@+id/line"
+            android:layout_marginTop="65dp"/>
+        <com.entage.nrd.entage.Utilities.SqaureImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/line"
+            android:background="@color/white"
+            android:id="@+id/sqaureImageView"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sqaureImageView"
+            android:layout_alignBottom="@+id/sqaureImageView"
+            android:layout_alignStart="@+id/sqaureImageView"
+            android:layout_alignEnd="@+id/sqaureImageView"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:id="@+id/entageBgPhoto"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                android:background="@color/white"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/line_2"
+            android:background="@color/gray1"
+            android:layout_below="@+id/sqaureImageView"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray0"
+            android:layout_marginBottom="5dp"
+            android:layout_above="@+id/linearLayout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/linearLayout"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/centerCrop"
+                android:padding="10dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/border_curve_gray_ops"
+                android:src="@drawable/ic_center_crop"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/fitCenter"
+                android:padding="10dp"
+                android:layout_marginStart="30dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/background_white_gray"
+                android:src="@drawable/ic_fit_center"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/fitXY"
+                android:padding="10dp"
+                android:layout_marginStart="30dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/background_white_gray"
+                android:src="@drawable/ic_fit_xy"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

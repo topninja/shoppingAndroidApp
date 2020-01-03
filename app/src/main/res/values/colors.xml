@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background">#f8fbfd</color>
+
+    <color name="white">#f8fbfd</color>
+    <color name="black">#454A4D</color>
+    <color name="gray0">#d6d6d6</color>
+    <color name="gray">#b6b6b6</color>
+    <color name="gray1">#878787</color>
+    <color name="gray2">#616161</color>
+
+
+
+    <color name="colorEntage">#593290</color>
+    <color name="colorEntage_1">#bcadd2</color>
+    <color name="red">#d12a2a</color>
+    <color name="blue">#2a3ad1</color>
+    <color name="green">#43b05c</color>
+    <color name="grayBG">#efeff0</color>
+
+    <color name="entage_blue_0">#4e94bd</color> // BD4E94
+    <color name="entage_blue">#4e94bd</color>79aecd //BD4E94
+    <color name="entage_blue_1">#cfe2ed</color> //  EAC7DD
+    <color name="entage_blue_2">#ebf3f8</color> // F5E6EF
+    <color name="entage_blue_3">#f8fbfd</color>
+    <color name="entage_gray">#454A4D</color>
+    <color name="entage_gray_2">#8A9499</color>
+    <color name="entage_gray_1">#BECDD5</color>
+    <color name="entage_brown">#c9a97a</color>
+    <color name="entage_red">#db3131</color>
+    <color name="entage_red_1">#f5c7c7</color>
+    <color name="entage_green">#4EBD94</color>
+
+    <color name="yellow">#efce4a</color>
+    <color name="entage_blue_trans">#99ffffff</color>
+
+</resources>

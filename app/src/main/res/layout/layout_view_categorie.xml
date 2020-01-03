@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/entage_blue_2"
+        android:id="@+id/bar_categorie">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:id="@+id/img"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:textColor="@color/black"
+            android:text=""
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutList"
+        android:layout_below="@+id/bar_categorie"
+        android:visibility="gone">
+        <com.entage.nrd.entage.utilities_1.CustomListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/line"
+            android:background="#dbf1a6"
+            android:layout_below="@+id/listView"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/show_more"
+            android:layout_below="@+id/line"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            android:background="@drawable/background_white_gray"
+            android:text="@string/show_more"/>
+        <!--<include layout="@layout/layout_views_categories_food"/>-->
+    </RelativeLayout>
+
+</RelativeLayout>

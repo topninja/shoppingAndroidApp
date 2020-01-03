@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".home.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="انتاجي"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="60dp"
+            android:textColor="@color/entage_gray"
+            android:id="@+id/textEntage"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/araalmbon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorInternet"
+            android:visibility="gone"
+            android:layout_below="@+id/textEntage"
+            android:text="@string/error_internet"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/entage_red"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/retry"
+            android:visibility="gone"
+            android:src="@drawable/ic_arrow_circle"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/errorInternet"
+            android:layout_centerHorizontal="true"/>
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:layout_below="@+id/errorInternet"
+            android:layout_centerHorizontal="true"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminate="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textEntage"
+            android:layout_alignEnd="@+id/textEntage"
+            android:layout_below="@+id/errorInternet"/>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

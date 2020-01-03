@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl">
+
+    <include layout="@layout/snippet_top_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout2"
+        android:background="@color/white"
+        android:layout_marginTop="45dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayou_note"
+            android:padding="6dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/grayBG"
+            android:visibility="gone"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/error_question_not_found"
+                android:textColor="@color/red"
+                android:layout_margin="5dp"
+                android:textSize="15dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/linearLayout1"
+            android:orientation="horizontal"
+            android:layout_below="@+id/relLayou_note"
+            android:weightSum="100"
+            android:layout_marginTop="1dp"
+            android:paddingBottom="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:id="@+id/image_item"
+                android:scaleType="centerCrop"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="60"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:id="@+id/item_name"
+                    android:layout_marginTop="3dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:id="@+id/item_price"
+                    android:layout_below="@+id/item_name"
+                    android:text=" "
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/entage_blue"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_to_basket"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="@string/add_to_basket"
+                    android:textColor="@drawable/text_color_entage_blue_ops"
+                    android:background="@drawable/border_curve_entage_blue_ops"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toStartOf="@+id/relLayout_wishList"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:textSize="16dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ddd"
+            android:layout_below="@+id/linearLayout1"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingBottom="2dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@color/entage_blue_3">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/username"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/question_time_posted"
+                    android:layout_toEndOf="@+id/username"
+                    android:layout_marginStart="10dp"
+                    android:layout_alignTop="@+id/username"
+                    android:layout_alignBottom="@+id/username"
+                    android:text=""
+                    android:gravity="bottom"
+                    android:textColor="@color/black"
+                    android:textSize="11dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:padding="2dp"
+                    android:id="@+id/more_options"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/black"
+                    android:rotation="90"
+                    android:src="@drawable/ic_more"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="start"
+                android:padding="5dp"
+                android:layout_marginTop="3dp"
+                android:maxLines="10"
+                android:ellipsize="end"
+                android:id="@+id/question"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_replay"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                android:padding="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/users_waite"
+                    android:text="@string/do_you_answer"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/replay"
+                    android:text="@string/replay"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@drawable/text_color_entage_red"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:background="@drawable/border_curve_entage_red"
+                    android:textSize="13dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/layout_answer"
+                android:visibility="gone"
+                android:background="@drawable/border_square_entage_blue_2_ops"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name_entaji_page"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="13dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/date_answer"
+                        android:layout_toEndOf="@+id/name_entaji_page"
+                        android:layout_marginStart="10dp"
+                        android:layout_alignTop="@+id/name_entaji_page"
+                        android:layout_alignBottom="@+id/name_entaji_page"
+                        android:text=""
+                        android:gravity="bottom"
+                        android:textColor="@color/black"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/replay_text"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="start"
+                    android:text=""
+                    android:textColor="@color/entage_gray"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/container_field"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@+id/linearLayout2"
+                android:background="@color/entage_blue"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/linearLayout2"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="85"
+                    android:id="@+id/text_question"
+                    android:text=""
+                    android:layout_marginEnd="10dp"
+                    android:inputType="text"
+                    android:layout_gravity="center"
+                    android:textSize="16dp"
+                    android:textColorHint="@color/gray1"
+                    android:theme="@style/editText"
+                    android:background="@null"/>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="15">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/post"
+                        android:text="@string/ask"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/entage_blue"
+                        android:textSize="16dp"
+                        android:textStyle="bold"/>
+
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:id="@+id/progressBar"
+                        android:visibility="gone"
+                        android:theme="@style/ProgressBarColor"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

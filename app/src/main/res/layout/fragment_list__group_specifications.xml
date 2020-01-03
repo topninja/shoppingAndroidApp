@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textListSpeci"
+            android:text="@string/text_fragment_list_group_speci"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginBottom="5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/line"
+            android:layout_below="@id/textListSpeci"
+            android:background="@color/gray"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1"
+            android:layout_below="@id/line"
+            android:layout_marginBottom="1dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextSpeci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/searchListSpeci"
+                android:ems="10"
+                android:layout_toLeftOf="@+id/image"
+                android:layout_toRightOf="@+id/delete"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="15dp">
+            </AutoCompleteTextView>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/image"
+                android:tint="@color/colorEntage"
+                android:src="@drawable/ic_search_1"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/delete"
+                android:tint="@color/red"
+                android:src="@drawable/ic_delete"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/list"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/relLayout1">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listViewSpecifications"
+                android:backgroundTint="@color/colorEntage">
+            </ListView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/background_white_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_list_chats"
+        android:visibility="gone"
+        android:text=""
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@drawable/text_color_entage_gray"
+        android:background="@drawable/border_curve_gray1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/incoming_speech_bubble"
+        android:paddingTop="7dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/image"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/image_word_google"
+            android:src="@drawable/ic_word_google_map"
+            android:layout_toEndOf="@+id/image"
+            android:layout_below="@+id/image"
+            android:layout_marginStart="-55dp"
+            android:layout_marginTop="-55dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_below="@+id/image"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text=""
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@+id/time"
+            android:lineSpacingExtra="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:text=""
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@+id/relLayoutDone"
+            android:layout_alignParentBottom="true"/>
+
+        <RelativeLayout
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/relLayoutDone"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sent"
+                android:tint="@color/black"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_done"/>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/progressBar"
+                android:padding="3dp"
+                android:theme="@style/ProgressBarColorBlack"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

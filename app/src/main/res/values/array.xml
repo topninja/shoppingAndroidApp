@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="placeTypes">
+        <item>PlaceType</item>
+        <item>Address</item>
+        <item>Cities</item>
+        <item>Establishment</item>
+        <item>Geocode</item>
+        <item>Regions</item>
+        <item>All</item>
+    </array>
+
+    <array name="placeTypesValue">
+        <item>0</item>
+        <item>2</item>
+        <item>5</item>
+        <item>34</item>
+        <item>1007</item>
+        <item>4</item>
+        <item>0</item>
+    </array>
+
+    <array name="shipping_companies">
+        <item>announced_later</item>
+        <item>personal_shipping</item>
+        <item>aramex</item>
+        <item>smsa</item>
+        <item>dhl</item>
+        <item>fedex</item>
+        <item>ups</item>
+        <item>alma</item>
+        <item>zajil</item>
+        <item>other</item>
+    </array>
+
+    <array name="advices">
+        <item>نصائح في أسم المنتج</item>
+        <item>نصائح في صور المنتج</item>
+        <item>نصائح في تصنيف المنتج</item>
+        <item>نصائح في وصف المنتج</item>
+        <item>نصائح في مواصافات المنتج</item>
+        <item>نصائح في خيارات المنتج</item>
+        <item>نصائح في سعر المنتج</item>
+        <item>نصائح  في معلومات الشحن للمنتج</item>
+        <item>نصائح  في طرق الدفع للمنتج</item>
+    </array>
+
+    <array name="advices_name_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_photo_item">
+        <item>الصور ذو الجودة العالية تجذب المستخدمين لمشاهدة المنتج وتظهره بكل تفاصيل.</item>
+    </array>
+
+    <array name="advices_categories_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_description_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_specification_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_options_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_price_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_shipping_item">
+        <item>- </item>
+    </array>
+
+    <array name="advices_payment_item">
+        <item>- </item>
+    </array>
+
+    <array name="edit_item">
+        <item>الصور</item>
+        <item>الاسم</item>
+        <item>التصنيف</item>
+        <item>الوصف</item>
+        <item>المواصفات</item>
+        <item>الخيارات</item>
+        <item>معلومات السعر</item>
+        <item>معلومات الشحن والدفع</item>
+        <item>إضافة تخفيض</item>
+        <item>إضافة عروض</item>
+        <item>إخبار المتابعين</item>
+        <item>إعلن المنتج</item>
+        <item>الوزن والابعاد</item>
+        <item>نقل السلعة الى قسم اخر</item>
+    </array>
+
+    <array name="sharing_text_items">
+        <item>المنتج رائع، انصحكم بشرائه</item>
+        <item>المنتج سعره مغري</item>
+        <item>عرض خيالي لهذا المنتج</item>
+        <item>المنتج وااااو </item>
+    </array>
+
+    <array name="sharing_text_pages">
+        <item>حياكم الله بمتجري</item>
+        <item>انصحكم بهذا المتجر</item>
+        <item>عندهم عروض واااو</item>
+    </array>
+
+    <array name="select_saved_description">
+        <item>إضافة الوصف الجديد بجانب الوصف الحالي</item>
+        <item>إزالة الوصف الحالي وإضافة الوصف الجديد</item>
+    </array>
+
+    <array name="types_search_area">
+        <item>نوع البحث</item>
+        <item>قارات</item>
+        <item>دول</item>
+        <item>ولايات/أقليم/مناطق</item>
+        <item>مدن</item>
+    </array>
+
+    <array name="types_add_location">
+        <item>إضافة موقع</item>
+        <item>موقع جديد</item>
+    </array>
+
+    <!-- Conversation Messages -->
+    <array name="conversation_messages_welcome"> <!-- the order very important -->
+        <item>السلام عليكم</item>
+        <item>مرحباً</item>
+        <item>اهلاً</item>
+        <item>هلا</item>
+        <item>اتفضل، كيف استطيع خدمتك؟</item>
+        <item>وعليكم السلام</item>
+    </array>
+
+    <array name="conversation_messages_shipping_vendor"> <!-- the order very important -->
+        <item>وقت ارسال الطلب هو </item>
+        <item>مبلغ الشحن هو </item>
+        <item>شركة الشحن هي </item>
+        <item>هل لديك وقت مناسب للإستلام الطلب؟</item>
+        <item>رقم الشحنة هو </item>
+        <item>اعتذر عن ارسال الطلب في الوقت المتفق عليه</item>
+        <item>قم بارسال عنوانك لارسال الشحنة اليك</item>
+    </array>
+
+    <array name="conversation_messages_shipping_user"> <!-- the order very important -->
+        <item>ماهو وقت إرسال الطلب؟</item>
+        <item>ماهو مبلغ الشحن؟</item>
+        <item>ماهي شركة الشحن؟</item>
+        <item>أنا اُفضل استلام الطلب في </item>
+        <item>ماهو رقم الشحنة؟</item>
+        <item>اعتذر على استلام الطلب في الوقت المتفق عليه</item>
+        <item>هل الطلب يشحن الى موقعي؟</item>
+    </array>
+
+    <array name="conversation_messages_location_vendor"> <!-- the order very important -->
+        <item>وقت استلام الطلب هو </item>
+        <item>هل لديك وقت مناسب للإستلام الطلب؟</item>
+        <item>اعتذر عن وقت استلام الطلب المتفق عليه</item>
+        <item>قم بارسال موقع استلام الطلب</item>
+    </array>
+
+    <array name="conversation_messages_location_user"> <!-- the order very important -->
+        <item>ماهو وقت استلام الطلب؟</item>
+        <item>أنا اُفضل استلام الطلب في </item>
+        <item>اعتذر على استلام الطلب في الوقت المتفق عليه</item>
+    </array>
+
+    <array name="conversation_messages_edit_vendor"> <!-- the order very important -->
+        <item>عفواً، لاتستطيع تغيير بيانات الطلب في هذه المرحلة</item>
+        <item>اريد تغيير بيانات الطلب</item>
+        <item>بيانات الطلب غير متوفرة حالياً</item>
+        <item>قم بتغيير بيانات الطلب</item>
+        <item>بيانات الطلب ستتوفر بتاريخ </item>
+    </array>
+
+    <array name="conversation_messages_edit_user"> <!-- the order very important -->
+        <item>هل استطيع تغير بينات الطلب؟</item>
+        <item>اريد تغيير بيانات الطلب</item>
+    </array>
+
+    <array name="conversation_messages"> <!-- the order very important -->
+        <item>شكراً</item>
+        <item>شكراً على تفهمكم</item>
+        <item>انا موافق</item>
+        <item>عفواً، انا غير موافق</item>
+        <item>هل انت موافق؟</item>
+        <item>عفواً، لا استطيع</item>
+        <item>لا</item>
+        <item>نعم</item>
+        <item>لا يوجد</item>
+        <item>غير متوفر</item>
+        <item>اتفضل</item>
+        <item>شكراً على ثقتكم بمنتجاتنا</item>
+    </array>
+
+    <array name="conversation_messages_titles"> <!-- the order very important -->
+        <item>نصوص ترحيب</item>
+        <item>نصوص متعلقة بالطلب (شحن)</item>
+        <item>نصوص متعلقة بالطلب (موقع استلام)</item>
+        <item>نصوص متعلقة بتعديل بالطلب</item>
+        <item>نصوص اخرى</item>
+    </array>
+
+    <!-- categories_keys -->
+    <array name="categories_keys">
+        <item>en_11</item>
+        <item>en_12</item>
+        <item>en_13</item>
+        <item>en_14</item>
+        <item>en_15</item>
+        <item>en_16</item>
+        <item>en_17</item>
+    </array>
+    <array name="categories">
+        <item>طعام</item> //en_11
+        <item>اجهزة إلكترونية</item> // en_12
+        <item>أدوات</item>         // en_13
+        <item>حلويات</item>     // en_14
+        <item>أدوات تجميل</item>     // en_15
+        <item>ملابس</item>  // en_16
+        <item>وجبات</item> // en_17
+    </array>
+    <!-- End -->
+
+
+    <!-- specifications_keys -->
+    <array name="specifications_keys">
+        <item>spe_11</item>
+        <item>spe_12</item>
+        <item>spe_13</item>
+        <item>spe_14</item>
+        <item>spe_15</item>
+        <item>spe_16</item>
+        <item>spe_17</item>
+        <item>spe_18</item>
+        <item>spe_19</item>
+        <item>spe_110</item>
+        <item>spe_111</item>
+    </array>
+    <array name="specifications">
+        <item>الطول</item>  // spe_11
+        <item>الوزن</item>  // spe_12
+        <item>الحجم</item>  // spe_13
+        <item>العلامة التجارية</item>   // spe_14
+        <item>الموديل</item>    // spe_15
+        <item>النوع</item>  // spe_16
+        <item>العرض</item>  // spe_17
+        <item>رقم الموديل</item> // spe_18
+        <item>مقاس الشاشة</item> // spe_19
+        <item>ذاكرة الرام</item> // spe_110
+        <item>الاستايل</item> // spe_111
+    </array>
+    <!-- End -->
+
+
+    <!-- Group specifications -->
+    <array name="group_specifications_phones">
+        <item>الهواتف</item> // first is name of group
+        <item>spe_11</item>
+        <item>spe_12</item>
+        <item>spe_14</item>
+        <item>spe_15</item>
+    </array>
+    <array name="group_specifications_food">
+        <item>الطعام</item> // first is name of group
+        <item>spe_11</item>
+        <item>spe_14</item>
+        <item>spe_16</item>
+    </array>
+    <array name="group_specifications_pc">
+        <item>لاب توب</item> // first is name of group
+        <item>spe_19</item>
+        <item>spe_110</item>
+    </array>
+    <!--  End -->
+
+
+    <!-- Group specifications -->
+    <array name="options_colors">
+        <item>الوان</item> // first is name of group
+        <item>احمر</item>
+        <item>اسود</item>
+        <item>ابيض</item>
+        <item>اخضر</item>
+        <item>اصفر</item>
+    </array>
+    <array name="options_sizes">
+        <item>مقاسات</item> // first is name of group
+        <item>كبير</item>
+        <item>وسط</item>
+        <item>صغير</item>
+    </array>
+    <array name="options_memory">
+        <item>الذاكرة</item> // first is name of group
+        <item>8 جيجا</item>
+        <item>16 جيجا</item>
+        <item>32 جيجا</item>
+        <item>64 جيجا</item>
+    </array>
+    <array name="options_flavors">
+        <item>نكهات</item> // first is name of group
+        <item>نكهة 1</item>
+        <item>نكهة 2</item>
+        <item>نكهة 3</item>
+    </array>
+    <!-- End -->
+
+
+    <!-- amount Deducted AFQ-->
+    <array name="afq_amount_deducted">
+        <item>ماهو مبلغ الخدمه؟</item>
+        <item>هو المبلغ الذي سوف يأخذه موقع انتاجي عند إتمام كل عملية بيع بنجاح</item>
+        <item>ماهية نسبة المبلغ؟</item>
+        <item>نسبة المبلغ هي 5% من مبلغ الشراء، حد ادنى 1 SAR وحد اعلى 30 SAR \n مثال:\n - لو كان مبلغ الشراء 10 SAR (5% من مبلغ الشراء هي 0.5 SAR) مبلغ الخدمه هو 1 SAR وهو الحد الادنى \n- لو كان مبلغ الشراء 700 SAR، (5% من مبلغ الشراء هي 35 SAR) مبلغ الخدمه هو 30 SAR وهو الحد الأعلى</item>
+        <item>كيف سيتم اخذ مبلغ الخدمه في حال كان الدفع عند الاستلام؟</item>
+        <item>سيتم اخذ المبلغ عند إتمام عملية البيع بنجاح من محفظة البائع لدى تطبيق انتاجي \nلا يستطيع البائع الموافقة على الطلب اذا لم يتوفر مبلغ الـ 5% من قيمة المنتج في محفظته لدى تطبيق انتاجي</item>
+        <item>كيف سيتم اخذ مبلغ الخدمه في حال كان الدفع عن طريق التطبيق؟</item>
+        <item>سيتم اخذ المبلغ عند إتمام عملية البيع وقبل ارسال مبلغ الى البائع</item>
+    </array>
+
+
+    <!-- features_entage_page -->
+    <array name="features_entage_page">
+        <item>اضافة المنتجات بكل سهولة وبكامل التفاصيل</item>
+        <item>صفحة انتاجي صممت لاضافة المنتجات بكل سهولة وبامكانية حفظ البيانات واستكمالها لاحقاً \nصفحة انتاجي ايضا توفر اضافة جميع تفاصيل المنتج كخيارات المنتج وتوفر الشحن و الوصف والميزات وطرق الدفع والعديد من الخدمات</item>
+        <item>التنقل بين اقسام المتجر بشكل مميز وفريد</item>
+        <item>صفحة انتاجي تقدم لك خدمة انشاء اكثر من قسم مع تنقل مميز وسهل بين الاقسام</item>
+        <item>التعامل مع الطلبات بشكل سهل وبسيط</item>
+        <item>صفحة انتاجي تقدم خدمة التحدث مع الزبائن عند قيامهم بارسال طلب جديد، خدمة التحدث مع الزبائن مقدمة بشكل مميز وبسيط حيث تسهل من إتمام عملية الشراء</item>
+        <item>رابط مشاركة لصفحتك ولمنتجاتك</item>
+        <item>رابط مشاركة صفحتك ينشئ تلقائياً ولمنتجاتك ايضاً، ويمكن لاي شخص يزور صفحتك ان يشارك رابطها وللمنتجات ايضاً</item>
+        <item>انشاء عروض والاعلان عنها</item>
+        <item>يمكنك انشاء عروض بين منتجاتك والاعلان عنها في التطبيق</item>
+        <item>اضافة تخفيضات</item>
+        <item>يمكنك اضافة تخفيضات للمنتجات لوقت معين مع الاعلان عنها في التطبيق</item>
+        <item>ارسال إشعار الى متابعينك</item>
+        <item>يتم ارسال إشعار الى جميع متابعينك عند اضافتك منتج جديد وهذا الامر يساعد في عملية البيع بشكل كبير\nويمكنك ايضا ارسال اشعار لمتابعينك في اي وقت لاعلامهم بعروض او تخفيات او اي امر اخر انت تحدده</item>
+        <item>ارسال إشعار الى هاتفك</item>
+        <item>صفحة انتاجي تقدم خيار ارسال اشعارات الى هاتفك عند طلب منتجاتك او عند سؤال جديد حول منتجاتك</item>
+
+    </array>
+
+
+</resources>

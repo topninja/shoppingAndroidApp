@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout_adapter_view_shipping_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/select_area"
+        android:background="@color/white"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_area"
+            android:textSize="16sp"
+            android:layout_marginStart="2dp"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout99"
+            android:layout_toEndOf="@+id/name_area">
+            <LinearLayout
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:id="@+id/layout_shipping_home_free"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="40dp"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@color/entage_red_1"
+                android:background="@drawable/ic_free_shipping"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free_the_shipping"
+                    android:textStyle="bold"
+                    android:layout_marginTop="-1dp"
+                    android:textColor="@color/black"
+                    android:textSize="9dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/free_the_shipping_1"
+                    android:layout_marginTop="-3dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="5dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/down_arrow"
+            android:layout_toEndOf="@+id/layout99"
+            android:src="@drawable/ccp_down_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:tint="@color/black"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_data"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shipping_companies"
+            android:textSize="14sp"
+            android:textColor="@color/entage_gray"
+            android:text="@string/shipping_company_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shipping_price"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/entage_gray"
+            android:text="@string/shipping_price"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_payment_methods"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/entage_gray"
+                android:text="@string/payment_method"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100">
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:scaleX="0.85"
+                    android:scaleY="0.85"
+                    android:textSize="16sp"
+                    android:clickable="false"
+
+                    android:id="@+id/payment_before_sending"
+                    android:textColor="@color/black"
+                    android:theme="@style/checkBoxStyleGray"
+                    android:text="@string/payment_before_sending_shipment"
+                    android:layout_marginTop="5dp"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:scaleX="0.85"
+                    android:scaleY="0.85"
+                    android:textSize="16sp"
+                    android:clickable="false"
+                    android:id="@+id/payment_upon_receipt"
+                    android:textColor="@color/black"
+                    android:theme="@style/checkBoxStyleGray"
+                    android:text="@string/payment_upon_receipt"
+                    android:layout_marginTop="3dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line100"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/gray0"/>
+
+</LinearLayout>

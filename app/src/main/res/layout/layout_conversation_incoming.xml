@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/background_white_gray">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_list_chats"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@drawable/text_color_entage_gray"
+        android:background="@drawable/border_curve_gray1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_marginEnd="75dp"
+        android:background="@drawable/outgoing_speech_bubble"
+        android:paddingTop="7dp"
+        android:paddingEnd="3dp"
+        android:paddingStart="15dp"
+        android:paddingBottom="3dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/image"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:visibility="gone"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/image_word_google"
+            android:src="@drawable/ic_word_google_map"
+            android:layout_toEndOf="@+id/image"
+            android:layout_below="@+id/image"
+            android:layout_marginStart="-55dp"
+            android:layout_marginTop="-55dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_below="@+id/image"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:text=""
+            android:visibility="visible"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="3dp"
+            android:paddingEnd="40dp"
+            android:lineSpacingExtra="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:text=""
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            android:layout_marginStart="-30dp"
+            android:layout_below="@+id/text"
+            android:layout_toEndOf="@+id/text" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

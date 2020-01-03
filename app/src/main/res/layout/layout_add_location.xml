@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:layout_toStartOf="@+id/arrow"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:hint="@string/address"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:id="@+id/arrow"
+            android:padding="12dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginStart="20dp"
+            android:layout_alignTop="@+id/title"
+            android:layout_alignBottom="@+id/title"
+            android:layout_alignParentEnd="true"
+            android:tint="@color/black"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:rotation="270"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:id="@+id/icon_google_map"
+            android:src="@drawable/ic_google_map"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/location_google_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_gray"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:selectAllOnFocus="false"
+            android:textIsSelectable="false"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="@string/the_location">
+        </AutoCompleteTextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_country"
+            android:visibility="gone"
+            android:layout_marginTop="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text1"
+                android:text="@string/select_country"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"/>
+            <com.hbb20.CountryCodePicker
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/country"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/text1"
+                android:layout_marginStart="20dp"
+                app:ccp_defaultLanguage="ARABIC"
+                app:ccp_defaultNameCode="SA"
+                app:ccp_countryPreference="SA,AE,KW,BH"
+                app:ccp_showFullName="true"
+                app:ccp_showPhoneCode="false"
+                app:ccp_showNameCode="false"
+                app:ccp_textGravity="RIGHT"
+                android:layout_centerVertical="true"
+                app:ccpDialog_searchEditTextTint="@color/gray1">
+            </com.hbb20.CountryCodePicker>
+        </RelativeLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/input_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_gray"
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:hint="@string/country">
+        </AutoCompleteTextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_searching_city"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/the_city"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/search"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:textSize="14sp"
+                android:id="@+id/input_city"/>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/search"
+                android:layout_alignBottom="@+id/search"
+                android:layout_alignEnd="@+id/search"
+                android:layout_alignStart="@+id/search"
+                android:padding="2dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/border_square_entage_gray"
+                android:theme="@style/ProgressBarColorBlack"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/search"
+                android:layout_alignParentEnd="true"
+                android:text="@string/search"
+                android:textColor="@drawable/text_color_entage_gray_ops"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:paddingStart="50dp"
+                android:paddingEnd="50dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="@drawable/border_square_entage_gray_ops"/>
+
+        </RelativeLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_gray"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/description_address">
+        </AutoCompleteTextView>
+
+        <AutoCompleteTextView
+            android:id="@+id/phone_number_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_gray"
+            android:textSize="14sp"
+            android:inputType="phone"
+            android:imeOptions="actionNext"
+            android:layout_marginTop="15dp"
+            android:hint="@string/the_phone_number">
+        </AutoCompleteTextView>
+
+        <AutoCompleteTextView
+            android:id="@+id/phone_number_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_gray"
+            android:textSize="14sp"
+            android:inputType="phone"
+            android:imeOptions="actionDone"
+            android:layout_marginTop="15dp"
+            android:hint="@string/the_phone_number">
+        </AutoCompleteTextView>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text9"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/entage_gray"
+            android:text="@string/payment_method"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_before_sending"
+            android:textColor="@color/black"
+            android:buttonTint="@color/entage_blue"
+            android:textSize="16sp"
+            android:text="@string/payment_before_sending_shipment"
+            android:layout_marginTop="5dp"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/payment_upon_receipt"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:buttonTint="@color/entage_blue"
+            android:text="@string/payment_upon_receipt"
+            android:layout_marginTop="3dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar_save_address"
+                android:layout_alignTop="@+id/save_location"
+                android:layout_alignBottom="@+id/save_location"
+                android:layout_alignStart="@+id/save_location"
+                android:layout_alignEnd="@+id/save_location"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_location"
+                android:background="@drawable/border_curve_gray_r3_ops"
+                android:gravity="center"
+                android:visibility="visible"
+                android:text="@string/add_locations"
+                android:textColor="@drawable/text_color_gray_ops"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingStart="60dp"
+                android:paddingEnd="60dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/save_location"
+                android:layout_alignBottom="@+id/save_location"
+                android:id="@+id/delete_location"
+                android:layout_toEndOf="@+id/save_location"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_delete"
+                android:padding="7dp"
+                android:tint="@drawable/text_color_entage_red"
+                android:background="@drawable/border_curve_red_r3"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:visibility="gone"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/gray"/>
+
+</LinearLayout>

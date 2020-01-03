@@ -1,0 +1,176 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layoutDirection="rtl">
+
+        <androidx.appcompat.widget.Toolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainToolBar"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/relLayout_1"
+                    android:layout_alignParentEnd="true">
+                    <ImageView
+                        android:id="@+id/home"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/entage_gray"
+                        android:src="@drawable/ic_home"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/layout_switch_searching"
+                        android:background="@drawable/border_curve_entage_blue_2_ops"
+                        android:layout_margin="5dp"
+                        android:animateLayoutChanges="true"
+                        android:visibility="gone">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="26dp"
+                            android:layout_height="match_parent"
+                            android:id="@+id/s0"
+                            android:layout_alignParentStart="true"
+                            android:src="@color/white"
+                            app:civ_border_width="1dp"
+                            app:civ_border_color="@color/white"
+                            android:padding="3dp"
+                            android:elevation="7dp"
+                            android:animateLayoutChanges="true"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/t1"
+                            android:text="@string/items"
+                            android:textStyle="bold"
+                            android:textColor="@color/entage_gray"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toEndOf="@+id/s0"
+                            android:gravity="center"
+                            android:visibility="visible"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/t2"
+                            android:visibility="gone"
+                            android:text="@string/entage_pages"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_toStartOf="@+id/s0"
+                            android:textStyle="bold"
+                            android:textColor="@color/entage_gray"
+                            android:gravity="center"/>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/relLayoutSearch"
+                    android:background="@drawable/border_curve_gray_no_click"
+                    android:layout_toEndOf="@+id/relLayout"
+                    android:layout_toStartOf="@+id/relLayout_1"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:id="@+id/icSearch"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:tint="@color/entage_gray"
+                        android:src="@drawable/ic_search_1"
+                        android:visibility="visible"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_search"
+                        android:layout_toEndOf="@id/icSearch"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/entage_gray"
+                        android:background="@null"
+                        android:theme="@style/editText_search"
+                        android:textSize="14dp"
+                        android:hint="عن ماذا تبحث؟"
+                        android:textColorHint="@color/entage_gray"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:imeOptions="actionSearch"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/relLayout"
+                    android:layout_alignParentStart="true">
+                    <ImageView
+                        android:id="@+id/personal"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="7dp"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/entage_gray"
+                        android:src="@drawable/ic_personal"
+                        android:visibility="visible"/>
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/back"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:paddingTop="9dp"-->
+<!--                        android:paddingBottom="9dp"-->
+<!--                        android:paddingEnd="5dp"-->
+<!--                        android:paddingStart="5dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:tint="@color/entage_gray"-->
+<!--                        android:src="@drawable/ic_back"-->
+<!--                        android:rotation="180"-->
+<!--                        android:visibility="gone"/>-->
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</merge>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:background="@color/entage_blue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:layout_marginTop="10dp"
+        android:text="@string/activate_entage_page"
+        android:textColor="@color/entage_gray"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:id="@+id/icon"
+            android:src="@drawable/ic_card_id"
+            android:tint="@color/entage_blue"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/entage_gray"
+            android:text="@string/seller_id"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:layout_marginTop="5dp"
+            android:textSize="16sp"
+            android:textColor="@color/entage_gray"
+            android:gravity="center"
+            android:text="@string/upload_seller_id"/>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_marginTop="45dp"
+           android:layout_marginBottom="20dp"
+           android:gravity="center_vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/activation"
+               android:gravity="center"
+               android:text="@string/activation"
+               android:textStyle="bold"
+               android:textColor="@drawable/text_color_entage_blue_ops"
+               android:background="@drawable/border_curve_entage_blue_ops"
+               android:paddingStart="42dp"
+               android:paddingEnd="42dp"
+               android:paddingTop="7dp"
+               android:paddingBottom="7dp"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/cancel"
+               android:gravity="center"
+               android:text="@string/cancle"
+               android:textStyle="bold"
+               android:visibility="visible"
+               android:layout_marginStart="20dp"
+               android:textColor="@color/black"
+               android:paddingStart="42dp"
+               android:paddingEnd="42dp"
+               android:paddingTop="7dp"
+               android:paddingBottom="7dp"/>
+
+       </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

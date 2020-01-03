@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/white"
+        android:id="@+id/linLayoutVerified"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="التحقق من الرقم المسجل"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="قم بكتابة رقم التحقق المرسل إليك"
+            android:textColor="@color/black"
+            android:layout_marginTop="25dp"
+            android:textSize="14dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:theme="@style/TextLabel_Black">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/hint_verify_number"
+                android:textSize="14dp"
+                android:id="@+id/inputPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border_signin">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_verify_number"
+                android:id="@+id/buttonCheckCode"
+                android:textColor="@drawable/text_color_signin"
+                android:background="@drawable/border_signin">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_alignTop="@+id/buttonCheckCode"
+                android:layout_alignBottom="@+id/buttonCheckCode"
+                android:id="@+id/ProgressBar_CheckCode"
+                android:theme="@style/ProgressBarColorBlack"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:id="@+id/text_wait"
+            android:text="@string/wait_resend_check_verify_number"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/resend_check_verify_number"
+            android:id="@+id/buttonResendCheckCode"
+            android:textColor="@drawable/text_color_login_black"
+            android:background="@drawable/border_login_black"
+            android:visibility="gone">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/resend_check_verify_number"
+            android:id="@+id/buttonWaitResendCheckCode"
+            android:textColor="@drawable/text_color_login_black"
+            android:background="@drawable/border_login_gray"
+            android:enabled="false">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <com.hbb20.CountryCodePicker
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/codePhoneNumber"
+            android:layout_marginTop="5dp"
+            app:ccp_defaultLanguage="ARABIC"
+            app:ccp_defaultNameCode="SA"
+            app:ccp_countryPreference="SA,AE,KW,BH"
+            app:ccp_textGravity="LEFT"
+            app:ccp_showFlag="true"
+            app:ccp_showFullName="true"
+            app:ccpDialog_searchEditTextTint="@color/gray1">
+        </com.hbb20.CountryCodePicker>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_Black"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/codePhoneNumber"
+            android:id="@+id/text_input00">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/hint_phone_number"
+                android:textSize="14sp"
+                android:id="@+id/inputPhoneNumber"
+                android:layout_toRightOf="@+id/text2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

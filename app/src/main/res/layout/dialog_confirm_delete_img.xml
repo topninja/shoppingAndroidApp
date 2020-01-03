@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:background="@color/entage_blue"/>
+
+    <com.entage.nrd.entage.Utilities.SqaureImageView
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:scaleType="centerCrop"
+        android:background="@color/grayBG"
+        android:id="@+id/imageView"
+        android:src="@drawable/testimage"
+        android:visibility="visible"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"/>
+
+</RelativeLayout>

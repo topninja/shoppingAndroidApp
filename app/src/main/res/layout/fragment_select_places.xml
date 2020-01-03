@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_wait_loading"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grayBG"
+            android:id="@+id/linearLayout"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text"
+                android:text="@string/select_type_search_area"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/type_search"
+                android:layout_below="@+id/text"
+                android:entries="@array/types_search_area"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="20dp"
+                android:textSize="20sp"
+                android:layout_toStartOf="@+id/show_selected_areas"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/spinner_border_black"
+                android:textColor="@color/black">
+            </Spinner>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/type_search"
+                android:layout_alignBottom="@+id/type_search"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/show_selected_areas"
+                android:gravity="center"
+                android:layout_below="@id/text"
+                android:text="@string/selected_laces"
+                android:layout_marginEnd="5dp"
+                android:textSize="14sp"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:button="@null"
+                android:background="@drawable/border_curve_gray_r3"
+                android:textColor="@drawable/text_color_gray"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/line"
+            android:background="@color/gray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/input_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabel_gray"
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="@string/country"
+                android:visibility="gone">
+            </AutoCompleteTextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/city"
+                android:id="@+id/search_for_cities"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textSize="14dp"
+                android:theme="@style/TextLabel_gray"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/get_cities"
+                android:text="@string/search"
+                android:gravity="center"
+                android:textColor="@drawable/text_color_entage_gray_ops"
+                android:textStyle="bold"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/border_square_entage_gray_ops"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/choose_areas"
+                android:text="@string/choose_areas_shipping_available"
+                android:textSize="15dp"
+                android:textColor="@color/entage_blue"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:id="@+id/list">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/no_areas"
+                    android:text="@string/no_areas"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="35dp"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recyclerView">
+
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <ProgressBar
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:theme="@style/ProgressBarColor"
+                    android:visibility="gone"
+                    android:id="@+id/progressBar"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

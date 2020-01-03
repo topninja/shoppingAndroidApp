@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<io.supercharge.shimmerlayout.ShimmerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    android:background="@drawable/background_white_gray"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layoutDirection="rtl"
+    android:padding="10dp"
+    app:shimmer_auto_start="true"
+    app:shimmer_color="@color/entage_blue_3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:id="@+id/relLayout"
+            android:background="@color/entage_blue_1">
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/entage_blue_2"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text1"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:textSize="14dp"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:id="@+id/profile_image"
+                android:layout_centerVertical="true"
+                android:src="@color/entage_blue_2"
+                android:scaleType="centerCrop"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/profile_image"
+                android:paddingStart="10dp"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:id="@+id/item_name"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/entage_blue_2"
+                    android:layout_marginEnd="80dp">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="140dp"
+                    android:background="@color/entage_blue_2"
+                    android:layout_below="@+id/item_name">
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</io.supercharge.shimmerlayout.ShimmerLayout>

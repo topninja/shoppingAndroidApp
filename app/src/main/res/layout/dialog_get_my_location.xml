@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_my_location"
+            android:id="@+id/message"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/get_my_current_location"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:padding="1dp"
+                android:src="@drawable/ic_my_location"
+                android:tint="@color/entage_blue"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/get_location"
+                android:textSize="16sp"
+                android:layout_marginStart="13dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/gray0"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_location_address_receiving_order"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/location_address_receiving_order"
+                android:textSize="14sp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/no_address"
+                android:text="@string/no_address"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/order_address_1"
+                android:visibility="gone"
+                android:text="@string/get_my_current_location"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/order_address_2"
+                android:text="@string/get_my_current_location"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:textColor="@color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="10dp"
+                android:background="@color/gray0"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginStart="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/my_address"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text=":"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/no_addresses"
+                android:layout_alignBottom="@id/no_addresses"
+                android:padding="6dp"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/no_addresses"
+                android:text="@string/no_addresses"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_address_1"
+            android:visibility="gone"
+            android:text="@string/get_my_current_location"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_address_2"
+            android:text="@string/get_my_current_location"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/manage_my_addresses"
+            android:text="@string/manage_my_addresses"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="4dp"
+            android:textSize="14sp"
+            android:background="@drawable/border_curve_entage_blue_1_ops"
+            android:textColor="@color/black"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingEnd="9dp"
+            android:paddingStart="9dp"
+            android:layout_marginBottom="5dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

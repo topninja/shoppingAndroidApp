@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_1"
+        android:text="@string/the_categories"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/text_1"
+        android:id="@+id/relLayout2">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:id="@+id/icSearch"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/entage_gray"
+            android:src="@drawable/ic_search_1"/>
+
+        <com.entage.nrd.entage.utilities_1.CustomAutoCompleteTextView
+            android:id="@+id/searchCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/editText_search"
+            android:ems="10"
+            android:maxLines="1"
+            android:imeOptions="actionSearch"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/icSearch"
+            android:background="@null"
+            android:hint="@string/creat_entage_page_select_categories_2"
+            android:textSize="16sp"
+            android:visibility="visible"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextSpeci"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/searchListSpeci"
+            android:ems="10"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/icSearch"
+            android:visibility="gone">
+        </AutoCompleteTextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/icSearch"
+            android:layout_marginBottom="10dp"
+            android:background="@color/entage_gray"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_ca"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/relLayout2"
+        android:visibility="visible">
+    </ListView>
+
+</RelativeLayout>

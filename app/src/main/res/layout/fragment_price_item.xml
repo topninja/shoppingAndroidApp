@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bar_add_item">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <include layout="@layout/layout_wait_loading"/>
+
+            <include layout="@layout/layout_advices"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text2"
+                    android:text="@string/currencies_item"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/currency_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/searchListSpeci"
+                    android:ems="10"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@+id/text2"
+                    android:layout_marginStart="10dp"
+                    android:enabled="false">
+                </AutoCompleteTextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/error"
+                    android:layout_below="@+id/currency_price"
+                    android:textColor="@color/red"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:text="@string/error_write_currencies"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayou_price"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text3"
+                    android:text="@string/price_item"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/price_item"
+                    android:inputType="numberDecimal"
+                    android:longClickable="false"
+                    android:maxLines="1"
+                    android:imeOptions="actionDone"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@+id/text3"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@+id/include_vat"
+                    android:theme="@style/editText"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/error1"
+                    android:layout_below="@+id/price_item"
+                    android:textColor="@color/red"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone"
+                    android:text="@string/error_write_price"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:id="@+id/include_vat"
+                    android:layout_centerVertical="true"
+                    android:text="@string/include_vat"
+                    android:textSize="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/blue"
+                    android:layout_alignParentEnd="true"
+                    android:theme="@style/checkBoxStyle"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/container"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray0"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <include layout="@layout/layout_bar_add_item"/>
+
+</RelativeLayout>

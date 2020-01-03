@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:id="@+id/main_relLayout"
+    android:layout_marginBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:background="@drawable/border_square_entage_blue_2_ops"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="عنوان"
+            android:textSize="14dp"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/count"
+            android:layout_toEndOf="@+id/title"
+            android:text=""
+            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/gray1"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/hide_show"
+            android:layout_alignBottom="@+id/hide_show"
+            android:id="@+id/move"
+            android:visibility="gone"
+            android:src="@drawable/ic_move"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/hide_show"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/hide_show"
+            android:layout_alignBottom="@+id/hide_show"
+            android:id="@+id/set_here"
+            android:src="@drawable/ic_check_choice_yes"
+            android:tint="@color/blue"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/hide_show"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/remove"
+            android:text="@string/remove"
+            android:textSize="14dp"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hide_show"
+            android:text="@string/hide"
+            android:layout_toStartOf="@+id/remove"
+            android:layout_marginEnd="20dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/entage_gray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_my_options"
+            android:text="@string/edit"
+            android:layout_toStartOf="@+id/hide_show"
+            android:layout_marginEnd="20dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@color/blue"/>
+
+    </RelativeLayout>
+
+    <com.entage.nrd.entage.utilities_1.CustomListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:animateLayoutChanges="true"
+        android:layout_below="@+id/relLayout">
+
+
+    </com.entage.nrd.entage.utilities_1.CustomListView>
+
+</RelativeLayout>

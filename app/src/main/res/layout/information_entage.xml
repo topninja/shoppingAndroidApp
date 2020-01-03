@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layoutDirection="rtl">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="انتاجي"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/entage_blue"
+        android:id="@+id/textEntage"
+        android:fontFamily="@font/araalmbon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0.0"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:id="@+id/textVersion"
+        android:layout_below="@id/textEntage"
+        android:textColor="@color/black"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textVersion"
+        android:layout_marginTop="10dp"
+        android:id="@+id/relLayout1"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_policy_text"
+            android:textSize="12dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/privacy_policy"
+            android:textColor="@color/entage_blue_0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:layout_toLeftOf="@+id/privacy_policy"
+            android:id="@+id/dash"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:textSize="12dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entageTermsOfUse"
+            android:layout_toLeftOf="@+id/dash"
+            android:id="@+id/terms_and_Conditions"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="12dp"
+            android:textColor="@color/entage_blue_0"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="حقوق الطبع و النشر 2019 انتاجي جميع الحقوق محفوظة"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relLayout1"
+        android:textSize="12dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/black"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:id="@+id/main_relLayout"
+    android:layout_marginBottom="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:background="@drawable/border_square_entage_blue_1_ops"
+        android:padding="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="عنوان"
+            android:textSize="14dp"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/hide_show"
+            android:layout_alignBottom="@+id/hide_show"
+            android:id="@+id/move"
+            android:src="@drawable/ic_move"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/hide_show"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/hide_show"
+            android:layout_alignBottom="@+id/hide_show"
+            android:id="@+id/set_here"
+            android:src="@drawable/ic_check_choice_yes"
+            android:tint="@color/entage_gray"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/hide_show"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/remove"
+            android:text="@string/remove"
+            android:textSize="14dp"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hide_show"
+            android:text="@string/hide"
+            android:layout_toStartOf="@+id/remove"
+            android:layout_marginEnd="20dp"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/entage_gray"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou1"
+        android:layout_below="@+id/relLayout">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_text"
+            android:text=""
+            android:layout_marginTop="1dp"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:theme="@style/editText"/>
+
+        <com.entage.nrd.entage.Utilities.SqaureImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/img_db"
+            android:src="@drawable/ic_database"
+            android:background="@color/entage_blue"
+            android:tint="@color/white"
+            android:layout_marginTop="4dp"
+            android:padding="5dp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
+            android:layout_alignBottom="@+id/image"
+            android:layout_alignEnd="@+id/image"
+            android:layout_alignStart="@+id/image"
+            android:id="@+id/upload_layout"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="#66000000">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress"
+                android:layout_gravity="center"
+                android:text="100%"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textColor="@drawable/text_color_entage_blue"
+                android:background="@drawable/border_curve_entage_blue"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

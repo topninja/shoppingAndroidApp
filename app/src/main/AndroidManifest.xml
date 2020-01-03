@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.entage.nrd.entage">
+
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" tools:nodSharingLocation_1e="remove"/>-->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--<uses-permission android:name="android.permission.VIBRATE"/>-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:configChanges="orientation|keyboardHidden"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".utilities_1.GlobalVariable"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"> <!-- Failed to allocate a 357616 byte allocation with 280304 free bytes and 273KB until OOM -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_map_api_key"/>
+
+        <activity android:name=".home.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--<meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true" />-->
+
+        <meta-data android:name="firebase_crash_collection_enabled" android:value="true" />
+
+        <activity android:name=".home.ActivityForOpenFragments"/>
+
+        <activity android:name=".utilities_1.ViewActivity"/>
+
+        <activity android:name=".basket.UserBasketActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".personal.PersonalActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".home.HomeActivity"/>
+
+        <activity android:name=".utilities_1.SharingLocation"/>
+
+
+
+        <activity android:name=".entage.EntageActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".Subscriptions.EntajiPageSubscriptionActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".followers.FollowersActivity"/>
+
+        <activity android:name=".createEntagePage.CreateEntagePageActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".editEntagePage.SettingsEntagePageActivity"/>
+
+<!--        <activity android:name=".payment.PaymentOrderActivity"/>-->
+
+        <activity android:name=".login.LoginActivity"/>
+        <activity android:name=".login.RegisterActivity"/>
+
+        <activity android:name=".newItem.AddNewItemActivity"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".newItem.ScalingTypeImage"/>
+
+        <activity android:name=".entage.EntagePageOrdersActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".SettingApp.SettingAppActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".emails.EmailActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".utilities_1.test"/>
+
+        <activity android:name=".utilities_1.ActivityDynamicLink"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="testentaji.page.link"
+                    android:scheme="https"/>
+
+
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".utilities_1.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <activity android:name=".payment.PayOrderActivity"/>
+
+        <activity android:name=".payment.SubscribeActivity"/>
+
+        <activity android:name=".payment.DepositFundsActivity"/>
+
+        <activity android:name="com.braintreepayments.api.BraintreeBrowserSwitchActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="${applicationId}.braintree" />
+            </intent-filter>
+        </activity>
+
+
+    </application>
+
+</manifest>

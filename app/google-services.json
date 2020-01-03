@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "118424739631",
+    "firebase_url": "https://entage-1994.firebaseio.com",
+    "project_id": "entage-1994",
+    "storage_bucket": "entage-1994.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118424739631:android:6b5db0ca17d12026",
+        "android_client_info": {
+          "package_name": "com.entage.nrd.entage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118424739631-61t5fq4r2edrdt3kikt9qk4u04jv80gp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.entage.nrd.entage",
+            "certificate_hash": "be0c768b3a08799a17ddc26319f3f189f2da7b45"
+          }
+        },
+        {
+          "client_id": "118424739631-22mtur3aodfosaln2cc2ajv1lufvjh4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6KaYAkAXXlYTVtjasRvdihXbUmpwLS3A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118424739631-22mtur3aodfosaln2cc2ajv1lufvjh4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

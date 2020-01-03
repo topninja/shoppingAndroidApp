@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_square_entage_blue"
+    android:layoutDirection="rtl"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_white_gray"
+        android:id="@+id/relLayout1">
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:id="@+id/arrow"
+            android:src="@drawable/ic_back"
+            android:tint="@color/black"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/categorie_name"
+            android:text="الاجهزة"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/arrow"
+            android:layout_centerVertical="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_butt"
+            android:buttonTint="@color/entage_blue"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete"
+            android:layout_toStartOf="@+id/radio_butt"
+            android:text="@string/delete"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:textColor="@color/red"
+            android:layout_marginEnd="15dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.RecyclerView
+        android:id="@+id/recyclerView_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayout1"
+        android:visibility="gone"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        android:layout_marginBottom="5dp"/>
+
+</RelativeLayout>

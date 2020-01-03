@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="15dp"
+    app:cardUseCompatPadding="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/entage_blue_2"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_entage_page_text_9"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/create_entage_page_text_10"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_create_store"
+                    android:tint="@color/black"
+                    android:background="@drawable/circle_border_in_item_view"
+                    android:backgroundTint="@color/entage_blue_1"/>
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:padding="7dp"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/ic_show_item"
+                    android:tint="@color/black"
+                    android:background="@drawable/circle_border_in_item_view"
+                    android:backgroundTint="@color/entage_blue_1"/>
+
+                <ImageView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:padding="7dp"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/ic_support"
+                    android:tint="@color/black"
+                    android:background="@drawable/circle_border_in_item_view"
+                    android:backgroundTint="@color/entage_blue_1"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:id="@+id/create_entage_page"
+                    android:text="@string/create_entage_page"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@drawable/text_color_login_black"
+                    android:background="@drawable/border_curve_black_ops"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</androidx.cardview.widget.CardView>

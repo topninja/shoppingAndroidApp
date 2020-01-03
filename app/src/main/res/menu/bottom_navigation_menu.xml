@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/selector_basket"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/ic_listSearch"
+        android:icon="@drawable/selector_messages"
+        android:title="">
+    </item>
+
+    <item
+        android:id="@+id/ic_entage"
+        android:icon="@drawable/selector_entage"
+        android:title="">
+
+    </item>
+
+    <item
+        android:id="@+id/ic_followers"
+        android:icon="@drawable/selector_followers"
+        android:title="">
+
+    </item>
+
+    <item
+        android:id="@+id/ic_personal"
+        android:icon="@drawable/selector_personal"
+        android:title="">
+    </item>
+
+</menu>

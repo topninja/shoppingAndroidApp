@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.entage.nrd.entage.Utilities.SqaureImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/entage_blue_2"
+        android:id="@+id/gridImageView"
+        android:visibility="visible">
+
+
+    </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/gridImageProgressBar"
+        android:theme="@style/ProgressBarColor"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+</RelativeLayout>

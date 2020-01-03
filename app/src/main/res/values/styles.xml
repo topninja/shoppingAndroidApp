@@ -1,0 +1,157 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/entage_blue_1</item>
+        <item name="colorPrimaryDark">@color/entage_blue</item>
+        <item name="colorAccent">@color/entage_gray</item>
+        <item name="android:windowBackground">@color/background</item>
+
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="TextLabel_gray" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/entage_gray</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/entage_gray</item>
+        <item name="colorControlNormal">@color/entage_gray</item>
+        <item name="colorControlActivated">@color/entage_gray</item>
+    </style>
+
+    <style name="TextLabel_Black" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/black</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/black</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/gray1</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/gray</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/gray1</item>
+    </style>
+
+    <!--Error label text style-->
+    <style name="ErrorText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="ErrorTextGreen" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="ProgressBarColor">
+        <item name="colorAccent">@color/entage_blue_1</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="ProgressBarColorWhite">
+        <item name="colorAccent">@color/white</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="ProgressBarColorBlack">
+        <item name="colorAccent">@color/black</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="ProgressBarColorRed">
+        <item name="colorAccent">@color/entage_red</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="ProgressBarColorGreen">
+        <item name="colorAccent">@color/entage_green</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="ProgressBarColorGray1">
+        <item name="colorAccent">@color/gray1</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/entage_blue</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance_14" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <!-- top main tabs search -->
+    <style name="editText_search" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/entage_gray</item>
+        <item name="colorControlActivated">@color/entage_gray</item>
+        <item name="android:textColorHighlight">@color/entage_gray_1</item>
+    </style>
+
+    <style name="editText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/entage_blue</item>
+        <item name="android:textColorHighlight">@color/entage_blue_1</item>
+    </style>
+
+    <style name="editTextGray" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/gray</item>
+        <item name="android:textColorHighlight">@color/gray0</item>
+    </style>
+
+    <style name="searchListSpeci" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/entage_blue</item>
+        <item name="android:textColorHighlight">@color/entage_blue_1</item>
+    </style>
+
+    <style name="checkBoxStyleList" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/entage_blue</item>
+        <item name="android:textColorSecondary">@color/entage_blue</item>
+    </style>
+
+    <style name="checkBoxStyleList_red" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/entage_red</item>
+        <item name="android:textColorSecondary">@color/entage_red</item>
+    </style>
+
+    <style name="checkBoxStyleGray" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/entage_gray</item>
+        <item name="android:textColorSecondary">@color/entage_gray</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:textColorSecondary">@color/blue</item>
+    </style>
+
+    <style name="AlertDialogBlue" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColor">@color/entage_gray</item>
+        <item name="textColorAlertDialogListItem">@color/entage_gray</item>
+        <item name="android:background">@color/white</item>
+        <!-- those to edit the color of checkboxes (I don't remember if both are needed or just one) -->
+        <item name="android:textColorSecondary">@color/entage_blue</item>
+        <item name="colorAccent">@color/entage_blue</item>
+    </style>
+
+
+</resources>

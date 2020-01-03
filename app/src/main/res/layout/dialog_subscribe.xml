@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:background="@color/entage_blue"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_marginTop="10dp"
+            android:text="@string/packages_for_entage_page"
+            android:textColor="@color/entage_gray"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/entage_blue_1"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/package_name"
+                android:gravity="start"
+                android:text="Flame"
+                android:textColor="@color/entage_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGrp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:background="@color/entage_blue_2"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_butt_1"
+                android:padding="2dp"
+                android:text=""
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_butt_2"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_butt_3"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:textSize="18sp"/>
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="2dp"
+            android:id="@+id/error"
+            android:text="@string/subscribe"
+            android:gravity="start"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textColor="@color/red"/>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/entage_blue_1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:background="@drawable/border_curve_entage_blue_2_ops">
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress"
+                    android:theme="@style/ProgressBarColorBlack"
+                    android:padding="5dp"
+                    android:layout_alignTop="@+id/subscribe"
+                    android:layout_alignBottom="@+id/subscribe"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subscribe"
+                    android:text="@string/subscribe"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:clickable="false"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/border_curve_entage_blue_2_ops"
+                    android:textColor="@color/entage_blue"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:id="@+id/cancel"
+                android:text="@string/cancle"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:background="@drawable/background_white_gray"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:text="@string/messages"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout_date"
+        android:visibility="gone"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/choose_date"
+            android:id="@+id/btn_date" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_date"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_toEndOf="@+id/btn_date"
+            android:inputType="date"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/btn_date"
+            android:layout_marginTop="10dp"
+            android:text="@string/choose_time"
+            android:id="@+id/btn_time" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_time"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_toEndOf="@+id/btn_time"
+            android:layout_below="@+id/btn_date"
+            android:layout_marginTop="10dp"
+            android:inputType="date"/>
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text"
+        android:visibility="gone"
+        android:maxLength="15"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

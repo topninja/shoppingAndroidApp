@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/comment_profile_image"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="3dp"
+        android:src="@drawable/ic_default"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:civ_border_color="@color/gray"
+        app:civ_border_width="0.5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/votes"
+        android:layout_toEndOf="@+id/comment_profile_image">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="عبدالاله"
+            android:id="@+id/comment_username"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سؤال و أستفسار"
+            android:textColor="@color/black"
+            android:layout_marginTop="1dp"
+            android:textSize="14dp"
+            android:layout_below="@+id/comment_username"
+            android:id="@+id/comment"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15:65+95"
+            android:textColor="@color/gray1"
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/comment_time_posted"
+            android:layout_below="@+id/comment"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/votes"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="5dp"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_horizontal"
+            android:tint="@color/black"
+            android:src="@drawable/ic_up_arrow"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_horizontal"
+            android:rotation="180"
+            android:tint="@color/black"
+            android:src="@drawable/ic_up_arrow"/>
+    </LinearLayout>
+
+</RelativeLayout>

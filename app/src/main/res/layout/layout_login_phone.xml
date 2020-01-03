@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <!-- login by phone number  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/relLayout_loginByPhone">
+
+        <com.hbb20.CountryCodePicker
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:id="@+id/codePhoneNumber"
+            android:layout_marginTop="5dp"
+            app:ccp_defaultLanguage="ARABIC"
+            app:ccp_defaultNameCode="SA"
+            app:ccp_countryPreference="SA,AE,KW,BH"
+            app:ccp_textGravity="LEFT"
+            app:ccp_showFlag="true"
+            app:ccp_showFullName="true"
+            app:ccpDialog_searchEditTextTint="@color/gray1">
+        </com.hbb20.CountryCodePicker>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabel_Black"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/codePhoneNumber"
+            android:id="@+id/text_input00">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="@string/hint_phone_number"
+                android:textSize="14dp"
+                android:id="@+id/inputPhoneNumber"
+                android:layout_toRightOf="@+id/text2"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/relLayout_verificationCode"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_writCode"
+            android:text="@string/enter_verification_code"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textLayout"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/text_writCode"
+            android:theme="@style/TextLabel_Black">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text=""
+                android:hint="@string/verification_code"
+                android:textSize="14dp"
+                android:id="@+id/inputVerifyNumber"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout_10"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/textLayout"
+            android:layout_toStartOf="@+id/relLayout_11"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/border_square_gray_0_ops">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/check_verify_number"
+                android:id="@+id/buttonVerifyNumber"
+                android:textColor="@color/black"
+                android:background="@drawable/border_square_gray_0_ops">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_alignTop="@+id/buttonVerifyNumber"
+                android:layout_alignBottom="@+id/buttonVerifyNumber"
+                android:layout_centerInParent="true"
+                android:id="@+id/ProgressBar_VerifyNumber"
+                android:theme="@style/ProgressBarColorBlack"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout_11"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/textLayout"
+            android:background="@drawable/border_square_black">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_check_verify_number"
+                android:id="@+id/buttonResendCheckCode"
+                android:textColor="@drawable/text_color_white_black"
+                android:background="@drawable/border_square_black">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <ProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_alignTop="@+id/buttonResendCheckCode"
+                android:layout_alignBottom="@+id/buttonResendCheckCode"
+                android:layout_centerInParent="true"
+                android:id="@+id/ProgressBar_resendCode"
+                android:visibility="gone"
+                android:theme="@style/ProgressBarColorBlack"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

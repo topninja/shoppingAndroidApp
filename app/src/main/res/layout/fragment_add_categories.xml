@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="5dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/auto_complete_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/searchListSpeci"
+        android:ems="10"
+        android:visibility="gone"
+        android:layout_marginStart="5dp">
+    </AutoCompleteTextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:text="@string/the_categories"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/auto_complete_text1"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_data"
+        android:text="@string/save"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue"
+        android:background="@drawable/border_curve_blue"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_below="@+id/auto_complete_text1"
+        android:layout_alignParentEnd="true"/>
+
+    <ProgressBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/progressBarSave"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1"
+        android:layout_below="@id/text"
+        android:layout_margin="5dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/searchListSpeci"
+            android:ems="10"
+            android:layout_toEndOf="@+id/image"
+            android:layout_marginStart="5dp">
+        </AutoCompleteTextView>
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:id="@+id/image"
+            android:tint="@color/entage_blue"
+            android:src="@drawable/ic_search_1"
+            android:layout_centerVertical="true">
+        </ImageView>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_marginTop="35dp"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/relLayout1"
+        android:background="@drawable/border_curve_gray1">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout2"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/circleimageview"
+                android:src="@color/gray1"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="4dp"
+                android:paddingEnd="4dp"
+                android:id="@+id/backPath"
+                android:src="@drawable/ic_back"
+                android:rotation="180"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/path"
+                android:layout_toEndOf="@+id/backPath"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="@string/the_categories"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayou"
+            android:layout_below="@id/relLayout2"
+            android:layout_margin="5dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_text_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/searchListSpeci"
+                android:ems="10"
+                android:layout_toEndOf="@+id/image_1"
+                android:layout_marginStart="5dp">
+            </AutoCompleteTextView>
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:id="@+id/image_1"
+                android:tint="@color/entage_blue"
+                android:src="@drawable/ic_search_1"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relLayou"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_bar_add_item"
+    android:background="@color/white"
+    android:layout_alignParentBottom="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou_bottomBar"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="10dp">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tips"
+            android:src="@drawable/ic_tips"
+            android:layout_alignTop="@+id/save"
+            android:layout_alignBottom="@+id/save"
+            android:tint="@drawable/selector_img_entage_blue"
+            android:background="@drawable/border_curve_entage_blue"
+            android:padding="4dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/f"
+            android:layout_gravity="center"
+            android:text="Tips"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="@drawable/text_color_entage_blue"
+            android:background="@drawable/border_curve_entage_blue"
+            android:visibility="gone"
+            android:paddingStart="9dp"
+            android:paddingEnd="9dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_alignTop="@+id/save"
+            android:layout_alignBottom="@+id/save"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/save"
+            android:layout_alignBottom="@+id/save"
+            android:layout_alignStart="@+id/save"
+            android:layout_alignEnd="@+id/save"
+            android:background="@drawable/border_curve_entage_blue_ops"
+            android:theme="@style/ProgressBarColorWhite"
+            android:padding="2dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:layout_gravity="center"
+            android:text="@string/save"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_toEndOf="@+id/tips"
+            android:textColor="@drawable/text_color_entage_blue_ops"
+            android:background="@drawable/border_curve_entage_blue_ops"
+            android:visibility="visible"
+            android:layout_marginStart="10dp"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/next_step"
+            android:layout_alignBottom="@+id/next_step"
+            android:layout_alignStart="@+id/next_step"
+            android:layout_alignEnd="@+id/next_step"
+            android:background="@drawable/border_curve_gray"
+            android:theme="@style/ProgressBarColorBlack"
+            android:id="@+id/progress_next_step"
+            android:padding="2dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/next_step"
+
+            android:layout_toEndOf="@+id/save"
+            android:layout_alignTop="@+id/save"
+            android:layout_alignBottom="@+id/save"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/border_curve_gray"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/next"
+                android:text="@string/to_next"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@drawable/text_color_entage_gray"
+                android:visibility="visible"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/line"
+                android:layout_toEndOf="@+id/next"
+                android:background="@color/entage_gray"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:id="@+id/icon_image"
+                android:layout_toEndOf="@+id/line"
+                android:tint="@drawable/selector_img_entage_gray"
+                android:src="@drawable/ic_images_item"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:paddingTop="5dp"
+    android:paddingEnd="5dp"
+    android:paddingStart="5dp"
+    android:paddingBottom="2dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/entage_blue_3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="13dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/question_time_posted"
+            android:layout_toEndOf="@+id/username"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@+id/username"
+            android:layout_alignBottom="@+id/username"
+            android:text=""
+            android:gravity="bottom"
+            android:textColor="@color/black"
+            android:textSize="11dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:id="@+id/more_options"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/black"
+            android:rotation="90"
+            android:src="@drawable/ic_more"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="بِك تقدم حلول وخدمات لوجستية لأصحاب الأعمال الإلكترونية و  "
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:gravity="start"
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        android:maxLines="10"
+        android:ellipsize="end"
+        android:id="@+id/question"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_notify_me"
+        android:visibility="visible"
+        android:layout_marginTop="6dp"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/do_notify_you"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/notify_me"
+            android:layout_alignBottom="@+id/notify_me"
+            android:layout_alignEnd="@+id/notify_me"
+            android:layout_alignStart="@+id/notify_me"
+            android:theme="@style/ProgressBarColor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notify_me"
+            android:text="@string/notify_me"
+            android:layout_alignParentEnd="true"
+            android:textColor="@drawable/text_color_entage_blue"
+            android:layout_centerVertical="true"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/border_curve_entage_blue"
+            android:textSize="13dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_replay"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/users_waite"
+            android:text="@string/do_you_answer"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textSize="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/replay"
+            android:text="@string/replay"
+            android:layout_alignParentEnd="true"
+            android:textColor="@drawable/text_color_entage_red"
+            android:layout_centerVertical="true"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/border_curve_entage_red"
+            android:textSize="13dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/layout_answer"
+        android:visibility="gone"
+        android:background="@drawable/border_square_entage_blue_2_ops"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_entaji_page"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="13dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_answer"
+                android:layout_toEndOf="@+id/name_entaji_page"
+                android:layout_marginStart="10dp"
+                android:layout_alignTop="@+id/name_entaji_page"
+                android:layout_alignBottom="@+id/name_entaji_page"
+                android:text=""
+                android:gravity="bottom"
+                android:textColor="@color/black"
+                android:textSize="11dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/replay_text"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="start"
+            android:text="بِك تقدم حلول وخدمات لوجستية لأصحاب الأعمال الإلكترونية والمتاجر الإلكترونية كالتوصيل والشحن والتخزين بمعايير عالمية تواكب التطور التقني لتتيح لأصحاب الأعمال التركيز على تطوير العمل وتحقيق إيرادات أعلى. خدماتنا تتيح لصاحب العمل الربط التلقائي مع الأنظمة الخاصة "
+            android:textColor="@color/entage_gray"
+            android:textSize="15dp"/>
+    </LinearLayout>
+
+</LinearLayout>

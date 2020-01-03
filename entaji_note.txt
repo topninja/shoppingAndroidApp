@@ -1,0 +1,66 @@
+apie doec for google/current-place: 
+https://developers.google.com/maps/documentation/android-sdk/current-place-tutorial?hl=en_US
+
+New Implementations:
+implementation 'com.github.irshulx:laser-native-editor:3.0.4' : https://github.com/irshuLx/Android-WYSIWYG-Editor
+implementation 'petrov.kristiyan:colorpicker-library:1.1.10'
+
+Removed  Implementations:
+implementation "com.google.android.gms:play-services-places:17.0.0"
+
+
+These Classes Most Changed:
+-FragmentDescriptionItem
+- layouts: fragment_description_item
+
+Some Changes:
+- utilites-1/ CustomAdapterListView_SavedDescriptions
+-  utilites-1/ViewItemFragment : setupDescription() and setupSpecifications()
+- utilites-1/LayoutViewCategorie
+- personal/ FragmentAddAddress
+-newItem/ FragmentAddLocations
+- newItem/ FragmentReviewItem
+- newItem/ FragmentSpecificationsItem
+- newItem/ FragmentImagesItem : getPackageEntagePage() and upgradeDialog()
+- baxket/ OrderConversationUserFragment
+-entage/ OrderConversationEntagePageFragment
+-entage/ Ad_CreateNewDivision : getPackageEntagePage() and upgradeDialog()
+- Subscriptions/ AdapterPackages
+- Subscriptions/ FragmentEntajiPageSubscription:  setupFirebaseAuth() and fetchEntajiPageSubscriptions()
+- layout: fragment_add__saved_descriptions
+- layout: layout_review_item_data
+- layout: fragment_specifications_item
+- layout: layout_view_description
+-adapters/ AdapterChats
+-adapters/ AdapterPackages
+-adapters/ AdapterViewShippingInfo
+- models/ Item
+- models/ReceivingLocation
+- models/MyAddress
+- models/LocationInformation
+-models/ SubscriptionPackage
+-home/ HomeActivity
+-home/ FragmentViewCategories
+
+-values/ strings: wallet_problems to pay_problems
+-values/ categories_code
+-values/ categories_arabic
+
+New Classes And Layouts:
+models/ DescriptionItem
+models/ DataViewCategorie
+utilities_1/ SharingLocation
+layout: tmpl_image_view
+layout: tmpl_image_view_render
+layout: dialog_subscribe
+layout: activity_pay_subscribe
+payment/ SubscribeActivity
+
+
+Delete:
+- delete SettingApp file with all classes inside 
+- adapters/ AdapterFieldsDescription
+- models/ TypeDataDescription
+- layouts: fragment_description_item1
+-payment/ PaymentOrderActivity
+- home/ FragmentMyFollowers

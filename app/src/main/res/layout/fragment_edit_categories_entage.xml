@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <include layout="@layout/snippet_top_bar"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="45dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layoutDirection="rtl"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:text="@string/the_categories"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginEnd="20dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TextInputLayout1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="5dp"
+                android:theme="@style/TextLabel">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectedCategories"
+                    android:textSize="16dp"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/the_categories"
+                    android:theme="@style/editText"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/removeAllCategories"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/blue"
+                android:text="@string/remove_current_categorie"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayout"
+                android:layout_marginTop="25dp"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_curve_gray1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relLayout2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:id="@+id/circleimageview"
+                        android:src="@color/gray1"/>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:padding="4dp"
+                        android:paddingEnd="4dp"
+                        android:id="@+id/backPath"
+                        android:src="@drawable/ic_back"
+                        android:rotation="180"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/path"
+                        android:layout_toEndOf="@+id/backPath"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:text="@string/the_categories"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relLayout1"
+                    android:layout_below="@id/relLayout2"
+                    android:layout_margin="5dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/searchListSpeci"
+                        android:ems="10"
+                        android:layout_toEndOf="@+id/image"
+                        android:layout_marginStart="5dp">
+                    </AutoCompleteTextView>
+
+                    <ImageView
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:id="@+id/image"
+                        android:tint="@color/entage_blue"
+                        android:src="@drawable/ic_search_1"
+                        android:layout_centerVertical="true">
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relLayout1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="5dp"/>
+
+                <ProgressBar
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/progressBarCategories"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/relLayout1"
+                    android:theme="@style/ProgressBarColor"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relLayout1"
+                    android:gravity="center">
+                    <include layout="@layout/layout_happend_wrong"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- <include layout="@layout/edit_categories"/>-->
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/entage_progressBar"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:theme="@style/ProgressBarColor"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

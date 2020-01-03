@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_new_option"
+        android:visibility="visible"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/warning"
+            android:text=""
+            android:textSize="15dp"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TextInputLayout"
+            android:theme="@style/TextLabel"
+            android:layout_below="@+id/warning">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_group_option"
+                android:inputType="text"
+                android:text=""
+                android:textSize="16dp"
+                android:id="@+id/title_options"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text6"
+            android:layout_below="@+id/TextInputLayout"
+            android:text="@string/options"
+            android:layout_marginTop="15dp"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/container_new_options"
+            android:layout_marginTop="5dp"
+            android:paddingEnd="50dp"
+            android:layout_below="@+id/text6"
+            android:orientation="vertical">
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/note"
+            android:text="@string/note_to_delete_option"
+            android:layout_below="@+id/container_new_options"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_new_filed_option"
+            android:text="@string/add_new_option"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/note"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14dp"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/border_square_black"
+            android:textColor="@color/black"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout5"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_list_option"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@drawable/text_color_entage_blue_ops"
+            android:id="@+id/button_add_new_option"
+            android:background="@drawable/border_curve_entage_blue_ops">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_list_option"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@drawable/text_color_entage_blue"
+            android:id="@+id/button_delete_option"
+            android:visibility="gone"
+            android:background="@drawable/border_curve_entage_blue">
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>
+
+</RelativeLayout>

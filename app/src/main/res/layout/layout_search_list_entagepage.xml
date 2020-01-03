@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    android:background="@drawable/background_white_gray"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layoutDirection="rtl"
+
+    android:padding="5dp"
+    android:elevation="1dp"
+    android:layout_margin="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:civ_border_color="@color/gray0"
+        app:civ_border_width="0.5dp"
+        android:id="@+id/profile_image"
+        android:layout_centerVertical="true"
+        android:src="@color/entage_blue_2"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayouText"
+        android:layout_toEndOf="@+id/profile_image"
+        android:paddingStart="10dp"
+        android:layout_toStartOf="@+id/relLayout"
+        android:layout_marginEnd="3dp"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:id="@+id/entage_name"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/entage_name"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray1"
+            android:id="@+id/description"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout_followed"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/followed"
+                android:text="@string/followed"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:gravity="center"
+                android:background="@drawable/border_curve_entage_blue_1_ops"/>
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/notification"
+                android:src="@drawable/ic_notification"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/followed"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:tint="@color/black"
+                android:layout_alignTop="@+id/followed"
+                android:layout_alignBottom="@+id/followed"
+                android:background="@drawable/border_curve_entage_blue_1"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/follow"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:text="@string/follow"
+            android:textColor="@drawable/text_color_entage_blue"
+            android:background="@drawable/border_curve_entage_blue"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

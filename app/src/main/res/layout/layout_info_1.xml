@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relLayout"
+    android:background="@color/background"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingStart="45dp"
+    android:paddingEnd="45dp">
+
+    <ImageView
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:id="@+id/image"
+    android:src="@drawable/ic_entage_page_is"
+    android:tint="@color/entage_blue"
+    android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:layout_below="@id/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/entage_gray"
+        android:text="@string/what_is_entage_page_que"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:layout_below="@id/text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:textColor="@color/entage_gray"
+        android:gravity="center"
+        android:text="@string/what_is_entage_page_ans"/>
+
+</RelativeLayout>

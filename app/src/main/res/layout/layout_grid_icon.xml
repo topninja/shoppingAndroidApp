@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/icon_image"
+        android:padding="13dp"
+        android:background="@drawable/border_curve_gray_bg"
+        android:tint="@color/entage_gray"
+        android:src="@drawable/ic_images_item"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:text="@string/adding_item"
+        android:gravity="center"
+        android:layout_below="@+id/icon_image"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/entage_gray"
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou"
+        android:visibility="gone"
+        android:layout_below="@+id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp">
+        <ProgressBar
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:theme="@style/ProgressBarColor"
+            android:id="@+id/progress"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wait_loading_layout"
+            android:text="@string/waite_checking"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/progress"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/entage_blue"
+            android:textStyle="bold"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:id="@+id/ic_complete"
+        android:padding="5dp"
+        android:layout_above="@+id/text"
+        android:layout_toEndOf="@+id/icon_image"
+        android:layout_marginStart="-10dp"
+        android:background="@drawable/circle_victor"
+        android:backgroundTint="@color/entage_red"
+        android:tint="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

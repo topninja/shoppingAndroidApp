@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/advice_layout"
+    android:background="@drawable/background_white_gray"
+    android:paddingTop="10dp"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="6dp"
+        android:id="@+id/image"
+        android:src="@drawable/ic_name_item"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/_title"
+        android:layout_toEndOf="@+id/image"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="@string/new_item_name"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayou"
+        android:layout_below="@+id/_title"
+        android:layout_toEndOf="@+id/image"
+        android:layout_marginStart="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/information"
+            android:textSize="16sp"
+            android:text=""
+            android:visibility="visible"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_images"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <com.entage.nrd.entage.utilities_1.CustomViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content">
+
+            </com.entage.nrd.entage.utilities_1.CustomViewPager>
+            <com.entage.nrd.entage.utilities_1.LayoutTrackingCircles
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tracking"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white">
+
+            </com.entage.nrd.entage.utilities_1.LayoutTrackingCircles>
+        </LinearLayout>
+
+        <com.github.irshulx.Editor
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:id="@+id/renderer"
+            app:render_type="Renderer"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_shipping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/relLayou"
+        android:background="@color/gray0"/>
+
+
+</RelativeLayout>

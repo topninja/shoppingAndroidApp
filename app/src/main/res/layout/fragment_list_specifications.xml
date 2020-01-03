@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_wait_loading"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relLayout1"
+                android:layout_marginBottom="1dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextSpeci"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/searchListSpeci"
+                    android:ems="10"
+                    android:layout_toEndOf="@+id/image"
+                    android:layout_toStartOf="@+id/delete"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp">
+                </AutoCompleteTextView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/image"
+                    android:tint="@color/entage_blue"
+                    android:src="@drawable/ic_search_1"
+                    android:visibility="visible"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true">
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/delete"
+                    android:tint="@color/entage_red"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_delete"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/cancel"
+                    android:tint="@color/entage_red"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_back_x"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+                </ImageView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/list"
+                android:layout_marginBottom="60dp"
+                android:layout_below="@id/relLayout1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/no_saved_"
+                    android:text="@string/no_saved_data"
+                    android:textColor="@color/black"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/progressBar"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:theme="@style/ProgressBarColor"
+                    android:visibility="gone"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listViewSpecifications"
+                    android:layout_below="@+id/progressBar">
+                </ListView>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView_deleteSpeci"
+                    android:visibility="gone"
+                    android:layout_below="@+id/progressBar">
+                </ListView>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_new_speci"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:id="@+id/button_add_new_speci"
+                android:visibility="visible"
+                android:background="@drawable/border_curve_entage_blue_1_ops"
+                android:layout_alignParentBottom="true">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@drawable/text_color_entage_red"
+                android:id="@+id/button_delete_speci"
+                android:visibility="gone"
+                android:background="@drawable/border_curve_red"
+                android:layout_alignParentBottom="true">
+            </androidx.appcompat.widget.AppCompatButton>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

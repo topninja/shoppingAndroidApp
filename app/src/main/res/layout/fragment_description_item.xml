@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/layout_bar_add_item">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp">
+            <include layout="@layout/layout_advices"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayout1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_my_description"
+                android:layout_marginStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/border_curve_entage_blue"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/image"
+                    android:layout_alignParentStart="true"
+                    android:tint="@drawable/text_color_entage_blue_0"
+                    android:src="@drawable/ic_add_to_my_group"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/save_description"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@drawable/text_color_entage_blue_0"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_saved_description"
+                android:layout_toEndOf="@+id/save_my_description"
+                android:layout_marginStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/border_curve_entage_blue"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/image1"
+                    android:layout_alignParentStart="true"
+                    android:tint="@drawable/text_color_entage_blue_0"
+                    android:src="@drawable/ic_my_group"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_saved_description"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/image1"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@drawable/text_color_entage_blue_0"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/add_saved_description"
+                android:background="@color/gray"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <!-- Begin Editor toolbar -->
+
+            <HorizontalScrollView android:id="@+id/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/entage_blue_1"
+                android:layout_marginBottom="2dp"
+                android:layout_alignParentBottom="true"
+                android:scrollbars="none">
+                <include layout="@layout/editor_toolbar_linearlayout_horizontal" />
+
+            </HorizontalScrollView>
+
+            <!--End of Editor toolbar -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:scrollbars="vertical"
+                android:layout_marginBottom="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_height="match_parent">
+                <com.github.irshulx.Editor
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editor"
+                    app:render_type="Editor"
+                    app:placeholder="@string/Start_writing_here"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="100dp">
+                </com.github.irshulx.Editor>
+            </ScrollView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_bar_add_item"/>
+
+</RelativeLayout>

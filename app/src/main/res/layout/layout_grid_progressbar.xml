@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.supercharge.shimmerlayout.ShimmerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shimmer_auto_start="true"
+    app:shimmer_color="@color/entage_blue_3"
+    android:padding="5dp"
+    android:elevation="2dp"
+    android:background="@color/white"
+    android:layout_margin="5dp"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.entage.nrd.entage.Utilities.SqaureImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/image"
+            android:src="@color/entage_blue_2"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutPrice"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/entage_blue_2"
+            android:layout_toStartOf="@+id/relLayout_heart"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@+id/image">
+
+            <RelativeLayout
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/currencyExchange"
+                android:layout_toEndOf="@+id/currency"
+                android:layout_alignTop="@+id/currency"
+                android:layout_alignBottom="@+id/currency"
+                android:layout_marginStart="15dp"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp"
+                    android:id="@+id/line_currency"
+                    android:src="@drawable/ic_arrow_circle"
+                    android:tint="@color/entage_blue"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_currency_exchange"
+                    android:tint="@color/entage_blue"
+                    android:visibility="visible"/>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginEnd="5dp"
+                android:id="@+id/price_item"
+                android:text=""
+                android:textColor="@color/entage_blue"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/price_item"
+                android:layout_alignTop="@+id/price_item"
+                android:layout_alignBottom="@+id/price_item"
+                android:id="@+id/currency"
+                android:text=""
+                android:gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/entage_blue"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="10dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/entage_blue_2"
+            android:id="@+id/item_name"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_below="@+id/relLayoutPrice"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:id="@+id/add_to_basket"
+            android:textColor="@drawable/text_color_entage_blue"
+            android:background="@drawable/border_square_entage_blue_2_ops"
+            android:textStyle="bold"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:maxLines="1"
+            android:layout_toStartOf="@+id/relLayout_wishList"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/item_name"/>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="28dp"
+            android:id="@+id/relLayout_wishList"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/border_square_entage_blue_2_ops"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/item_name">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</io.supercharge.shimmerlayout.ShimmerLayout >

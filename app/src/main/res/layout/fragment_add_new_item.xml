@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layoutDirection="rtl">
+
+    <!-- Center Page -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/add_new_item"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_white_gray">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/image1"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_add_new_item"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image1"
+                android:layout_marginStart="10dp"
+                android:text="@string/adding_new_item"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/background_white_gray">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="320dp"
+                android:id="@+id/image2"
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+                android:src="@drawable/ic_continue_adding_tem"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/image2"
+                android:layout_marginStart="10dp"
+                android:text="@string/continue_adding_item"
+                android:textColor="@color/black"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/progressBar"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="5dp"
+            android:theme="@style/ProgressBarColor"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/noDataFound"
+            android:text="@string/no_saved_items"
+            android:textColor="@color/blue"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="1dp">
+
+    <com.entage.nrd.entage.Utilities.SqaureImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:id="@+id/gridImageView"
+        android:visibility="visible">
+
+
+    </com.entage.nrd.entage.Utilities.SqaureImageView>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/img_db"
+        android:src="@drawable/ic_database"
+        android:background="@color/entage_blue"
+        android:tint="@color/white"
+        android:padding="5dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gridImageView"
+        android:layout_alignBottom="@+id/gridImageView"
+        android:gravity="center"
+        android:id="@+id/add_image"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_image"
+            android:textStyle="bold"
+            android:textColor="@drawable/text_color_gray"
+            android:background="@drawable/border_curve_gray1"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swap"
+        android:layout_alignTop="@+id/gridImageView"
+        android:layout_alignBottom="@+id/gridImageView"
+        android:src="@drawable/ic_check_choice_yes"
+        android:padding="40dp"
+        android:background="#66000000"
+        android:visibility="gone">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gridImageView"
+        android:layout_alignBottom="@+id/gridImageView"
+        android:id="@+id/delete_layout"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="#66000000">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete"
+        android:layout_gravity="center"
+        android:text="@string/delete"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="@drawable/text_color_entage_red"
+        android:background="@drawable/border_curve_red"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cancel"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/delete"
+            android:text="@string/cancle"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gridImageView"
+        android:layout_alignBottom="@+id/gridImageView"
+        android:id="@+id/upload_layout"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="#66000000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress"
+            android:layout_gravity="center"
+            android:text="100%"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textColor="@drawable/text_color_entage_blue"
+            android:background="@drawable/border_curve_entage_blue"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout"
+        android:layout_alignTop="@+id/gridImageView"
+        android:layout_alignBottom="@+id/gridImageView"
+        android:background="@color/entage_blue_trans"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="3dp"
+        android:id="@+id/selected_count"
+        android:text="1"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        android:background="@drawable/border_curve_1_black"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/gridImageProgressBar"
+        android:theme="@style/ProgressBarColor"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+</RelativeLayout>

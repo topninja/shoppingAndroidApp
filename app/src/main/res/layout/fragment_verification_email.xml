@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="انتاجي"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="50dp"
+                    android:gravity="center"
+                    android:textColor="@color/entage_blue"
+                    android:id="@+id/textEntage"
+                    android:fontFamily="@font/araalmbon"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/verification_account"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="start"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:theme="@style/TextLabel_Black"
+                    android:id="@+id/text_input3"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_login_email"
+                        android:enabled="false"
+                        android:textSize="14dp"
+                        android:id="@+id/mEmail_notVerified"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:id="@+id/text_wait"
+                    android:text="@string/message_send_check_verify_link"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:textSize="12dp"
+                    android:id="@+id/mesg"
+                    android:visibility="gone"
+                    android:text="@string/message_send_check_verify_link"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@+id/relLayout_11"
+                        android:background="@drawable/border_square_gray_0_ops">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/verification_done"
+                            android:id="@+id/buttonChecking"
+                            android:textColor="@drawable/text_color_white_black"
+                            android:background="@drawable/border_square_gray_0_ops">
+                        </androidx.appcompat.widget.AppCompatButton>
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:layout_alignTop="@+id/buttonChecking"
+                            android:layout_alignBottom="@+id/buttonChecking"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/ProgressBar_Checking"
+                            android:visibility="visible"
+                            android:theme="@style/ProgressBarColorBlack"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relLayout_11"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/border_square_black">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resend_check_verify_link"
+                            android:id="@+id/buttonResendCheckCode"
+                            android:textColor="@drawable/text_color_white_black"
+                            android:background="@drawable/border_square_black">
+                        </androidx.appcompat.widget.AppCompatButton>
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:layout_alignTop="@+id/buttonResendCheckCode"
+                            android:layout_alignBottom="@+id/buttonResendCheckCode"
+                            android:layout_centerInParent="true"
+                            android:id="@+id/ProgressBar_resendCode"
+                            android:visibility="gone"
+                            android:theme="@style/ProgressBarColorBlack"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/gray0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:text="@string/verification_email_not_received"/>
+
+                <com.entage.nrd.entage.utilities_1.CustomListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listView"
+                    android:divider="@null"
+                    android:layout_marginTop="10dp">
+
+
+                </com.entage.nrd.entage.utilities_1.CustomListView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/gray0"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/border_login_black">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:text="@string/sign_out"
+                        android:id="@+id/sign_out"
+                        android:textColor="@drawable/text_color_login_black"
+                        android:background="@drawable/border_login_black">
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:visibility="visible"
+                        android:layout_centerInParent="true"
+                        android:layout_alignTop="@+id/sign_out"
+                        android:layout_alignBottom="@+id/sign_out"
+                        android:id="@+id/ProgressBar_notVerified"
+                        android:theme="@style/ProgressBarColorWhite"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

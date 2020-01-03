@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:padding="5dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/votes">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ratings">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:id="@+id/star_1"
+                android:tint="@color/yellow"
+                android:src="@drawable/ic_star"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/star_2"
+                android:layout_marginStart="5dp"
+                android:tint="@color/yellow"
+                android:src="@drawable/ic_star"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/star_3"
+                android:layout_marginStart="5dp"
+                android:tint="@color/yellow"
+                android:src="@drawable/ic_star"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/star_4"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_star"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/star_5"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_star"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" من شان هاتف سامسونج جالكسي S8 الذكي ان يمنحك بعض افضل الكاميرات الرقمية المتطورة."
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:id="@+id/rating"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/ratings"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:text="Abdulelah"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray1"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dash"
+                android:text=" | "
+                android:gravity="center_vertical"
+                android:textColor="@color/gray1"
+                android:textSize="14dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/username"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_time_posted"
+                android:text="15:65+95"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray1"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/dash"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="34dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/votes"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:id="@+id/like"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_like"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/blue"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:rotation="180"
+            android:src="@drawable/ic_dislike"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="90"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/red"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

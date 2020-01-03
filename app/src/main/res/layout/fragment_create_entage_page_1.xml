@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.entage.nrd.entage.utilities_1.CustomViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+            </com.entage.nrd.entage.utilities_1.CustomViewPager>
+
+            <com.entage.nrd.entage.utilities_1.LayoutTrackingCircles
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tracking"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:layout_below="@+id/viewpager">
+
+            </com.entage.nrd.entage.utilities_1.LayoutTrackingCircles>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:layout_height="85dp"
+        android:background="@color/white"
+        android:layoutDirection="rtl">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/HomeToolBar"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@color/entage_blue">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:text="@string/entageOrders"
+                        android:id="@+id/titlePage"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="#ffffff"
+                        android:layout_toStartOf="@+id/more_options"
+                        android:layout_toEndOf="@+id/back"/>
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/more_options"
+                        android:paddingStart="9dp"
+                        android:paddingEnd="9dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:tint="#ffffff"
+                        android:src="@drawable/ic_more_vert"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/back"
+                        android:layout_marginEnd="15dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:tint="#ffffff"
+                        android:src="@drawable/ic_back"
+                        android:rotation="180"/>
+
+                </RelativeLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:id="@+id/tabs"
+                    app:tabSelectedTextColor="@color/entage_blue"
+                    app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                    app:tabIndicatorColor="@color/entage_blue">
+
+
+                </com.google.android.material.tabs.TabLayout>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager">
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

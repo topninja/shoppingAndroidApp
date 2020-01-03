@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <include layout="@layout/snippet_top_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:id="@+id/entageBgPhoto"
+                    android:src="@drawable/ic_default"
+                    android:scaleType="centerCrop"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:civ_border_color="@color/entage_blue_2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/ic_default"
+                    android:id="@+id/entagePhoto"
+                    android:layout_gravity="start">
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changeBgPhoto"
+                    android:layout_toEndOf="@+id/entagePhoto"
+                    android:layout_below="@+id/entageBgPhoto"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/change_photo"
+                    android:gravity="center"
+                    android:textColor="@color/entage_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changeProfilePhoto"
+                    android:layout_alignStart="@+id/entagePhoto"
+                    android:layout_alignEnd="@+id/entagePhoto"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/entagePhoto"
+                    android:text="@string/change_photo"
+                    android:gravity="center"
+                    android:textColor="@color/entage_gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <!-- Name Entage -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1"
+                    android:layout_marginTop="35dp"
+                    android:text="@string/creat_entage_page_name_of_page"
+                    android:textColor="@color/gray1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/entageName"
+                        android:layout_toStartOf="@+id/relLayou_9"
+                        android:text=""
+                        android:hint="@string/change_entageName"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:background="@drawable/edit_text_line"
+                        android:theme="@style/editText"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/error_change_entageName"
+                        android:text="@string/change_entageName"
+                        android:textColor="@color/red"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/entageName"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="20dp"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relLayou_9"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="15dp">
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/change_entageName"
+                            android:layout_alignTop="@+id/change_entageName"
+                            android:layout_alignEnd="@+id/change_entageName"
+                            android:layout_alignStart="@+id/change_entageName"
+                            android:background="@drawable/border_curve_gray"
+                            android:padding="2dp"
+                            android:theme="@style/ProgressBarColorBlack"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/change_entageName"
+                            android:text="@string/change_entageName"
+                            android:textColor="@drawable/text_color_entage_gray"
+                            android:textSize="16sp"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:visibility="visible"
+                            android:background="@drawable/border_curve_gray"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- Desc Entage -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text2"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/creat_entage_page_caption_1"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray1"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/entageDesc"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_line"
+                    android:theme="@style/editText"/>
+
+
+                <!-- Private Information -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/communication_data"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="30dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <!--  Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text3"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/email"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray1"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/entageEmail"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:inputType="textEmailAddress"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text_line"
+                    android:theme="@style/editText"/>
+
+                <!--  Phone -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/phone_number"
+                    android:textSize="16sp"
+                    android:textColor="@color/gray1"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/entagePhoneNumber"
+                    android:textSize="16sp"
+                    android:text=""
+                    android:layout_marginTop="5dp"
+                    android:inputType="phone"
+                    android:background="@drawable/edit_text_line"
+                    android:theme="@style/editText"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

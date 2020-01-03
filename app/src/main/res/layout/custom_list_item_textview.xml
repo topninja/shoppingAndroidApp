@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@drawable/background_white_gray">
+
+    <TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/text1"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:textSize="16dp"
+        android:layout_height="?android:attr/listPreferredItemHeightSmall"
+        android:gravity="center_vertical"
+        android:text=""
+        android:layout_toStartOf="@+id/remove"
+        android:layout_toEndOf="@+id/checkBox"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"/>
+
+    <CheckBox
+        android:id="@id/checkBox"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:theme="@style/checkBoxStyleList"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@id/remove"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:layout_width="50dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_back_x"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:theme="@style/checkBoxStyleList"
+        android:layout_marginStart="10dp"/>
+
+</RelativeLayout>

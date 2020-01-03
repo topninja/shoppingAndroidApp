@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/entage_blue"
+        android:id="@+id/textEntage"
+        android:fontFamily="@font/araalmbon"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:id="@+id/relLayoutEmail">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_email"
+            android:id="@+id/textViewEmail"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:id="@+id/relLayoutPhoneNumber">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewPhoneNumber"
+            android:text="@string/register_phone_number"
+            android:textColor="@color/black"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:paddingStart="5dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/backArrow"
+                    android:visibility="visible"
+                    android:rotation="180"
+                    android:tint="@color/black"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_back"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_new_account"
+                    android:id="@+id/title"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/complete_registering"
+                android:textColor="@color/black"
+                android:id="@+id/text6"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_username"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/textInputLayout"
+                app:errorTextAppearance="@style/ErrorText"
+                app:errorEnabled="true"
+                android:layout_marginBottom="5dp"
+                android:theme="@style/TextLabel">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:hint="@string/hint_username"
+                    android:textSize="14sp"
+                    android:id="@+id/inputUserNme" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/personal_info"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:theme="@style/TextLabel_Black">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text=""
+                    android:hint="@string/hint_first_name"
+                    android:textSize="14sp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:id="@+id/inputFirstName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:theme="@style/TextLabel_Black">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text=""
+                    android:hint="@string/hint_last_name"
+                    android:textSize="14sp"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:id="@+id/inputLastName"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+                <TextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_sex"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="30dp"/>
+                <RadioButton
+                    android:id="@+id/sexMale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="@string/select_male"
+                    android:buttonTint="@color/black" />
+                <RadioButton
+                    android:id="@+id/sexFemale"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="@string/select_female"
+                    android:buttonTint="@color/black" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text1"
+                    android:text="@string/select_country"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"/>
+                <com.hbb20.CountryCodePicker
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/country"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toEndOf="@+id/text1"
+                    android:layout_marginStart="20dp"
+                    app:ccp_defaultLanguage="ARABIC"
+                    app:ccp_defaultNameCode="SA"
+                    app:ccp_countryPreference="SA,AE,KW,BH"
+                    app:ccp_showFullName="true"
+                    app:ccp_showPhoneCode="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_textGravity="RIGHT"
+                    android:layout_centerVertical="true"
+                    app:ccpDialog_searchEditTextTint="@color/gray1">
+                </com.hbb20.CountryCodePicker>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layout_searching_city"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/the_city"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/search"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:textSize="14sp"
+                    android:theme="@style/TextLabel_Black"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:id="@+id/input_city"/>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/search"
+                    android:layout_alignBottom="@+id/search"
+                    android:layout_alignEnd="@+id/search"
+                    android:layout_alignStart="@+id/search"
+                    android:padding="2dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/border_square_entage_gray"
+                    android:theme="@style/ProgressBarColorBlack"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/search"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/search"
+                    android:textColor="@drawable/text_color_entage_gray_ops"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:background="@drawable/border_square_entage_gray_ops"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_auth_info"
+                android:id="@+id/text7"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_method_login"
+                android:textColor="@color/black"
+                android:id="@+id/text8"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/tabs"
+                android:layout_marginBottom="5dp"
+                app:tabSelectedTextColor="@color/entage_blue"
+                app:tabTextAppearance="@style/MyTabLayoutTextAppearance_14"
+                app:tabIndicatorColor="@color/entage_blue">
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="5dp"
+                android:id="@+id/viewpager_info_register">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/line3"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/gray0"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textError"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                android:text="@string/email_not_verified"
+                android:textColor="@color/red"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/border_square_entage_blue_ops">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_new_account"
+                    android:id="@+id/buttonRegisterAccount"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:textSize="14sp"
+                    android:textColor="@drawable/text_color_entage_blue_ops"
+                    android:background="@drawable/border_square_entage_blue_ops">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_alignTop="@+id/buttonRegisterAccount"
+                    android:layout_alignBottom="@+id/buttonRegisterAccount"
+                    android:id="@+id/progressBarRegister"
+                    android:theme="@style/ProgressBarColorWhite"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/text10"
+                android:textSize="12sp"
+                android:text="@string/confirm_text"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:id="@+id/relLayou10"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Terms_and_Conditions"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp"
+                    android:text="@string/term_text"
+                    android:textColor="@color/entage_blue"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/or"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/Terms_and_Conditions"
+                    android:textSize="12sp"
+                    android:text="@string/and_text"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Privacy_policy"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/or"
+                    android:textSize="14sp"
+                    android:text="@string/privacy_policy_text"
+                    android:textColor="@color/entage_blue"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray0"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/relLayou12"
+                android:visibility="gone"
+                android:background="@drawable/border_login_black">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:text="@string/sign_out"
+                    android:id="@+id/sign_out"
+                    android:textColor="@drawable/text_color_login_black"
+                    android:background="@drawable/border_login_black">
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"
+                    android:layout_alignTop="@+id/sign_out"
+                    android:layout_alignBottom="@+id/sign_out"
+                    android:id="@+id/ProgressBar_notVerified"
+                    android:theme="@style/ProgressBarColorWhite"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

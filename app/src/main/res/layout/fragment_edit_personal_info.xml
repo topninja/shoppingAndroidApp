@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBG"
+    android:layoutDirection="rtl"
+    >
+
+    <include layout="@layout/snippet_top_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@color/white"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/TextLabel_Black">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/hint_first_name"
+                        android:textSize="14sp"
+                        android:id="@+id/inputFirstName"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:theme="@style/TextLabel_Black">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/hint_last_name"
+                        android:textSize="14sp"
+                        android:id="@+id/inputLastName"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel_Black"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/text_input1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:hint="@string/hint_login_email"
+                        android:textSize="14sp"
+                        android:id="@+id/email"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relLayoutPhone">
+
+                    <com.hbb20.CountryCodePicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:id="@+id/codePhoneNumber"
+                        app:ccp_defaultLanguage="ARABIC"
+                        app:ccp_defaultNameCode="SA"
+                        app:ccp_countryPreference="SA,AE,KW,BH"
+                        app:ccp_textGravity="LEFT"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        app:ccp_showFlag="false"
+                        app:ccpDialog_searchEditTextTint="@color/gray1">
+                    </com.hbb20.CountryCodePicker>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:theme="@style/TextLabel_Black"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/codePhoneNumber"
+                        android:layout_centerVertical="true">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:hint="@string/hint_phone_number"
+                            android:textSize="14dp"
+                            android:id="@+id/inputPhoneNumber"
+                            android:layout_toRightOf="@+id/text2"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGrp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:paddingTop="2dp">
+                    <TextView
+                        android:id="@+id/header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_sex"
+                        android:textSize="14dp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="30dp"/>
+                    <RadioButton
+                        android:id="@+id/sexMale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:text="@string/select_male"
+                        android:buttonTint="@color/black" />
+                    <RadioButton
+                        android:id="@+id/sexFemale"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:layout_weight="1"
+                        android:textSize="14dp"
+                        android:text="@string/select_female"
+                        android:buttonTint="@color/black" />
+                </RadioGroup>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text1"
+                        android:text="@string/select_country"
+                        android:textSize="14dp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"/>
+                    <com.hbb20.CountryCodePicker
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/country"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toLeftOf="@+id/text1"
+                        android:layout_marginStart="40dp"
+                        app:ccp_defaultLanguage="ARABIC"
+                        app:ccp_defaultNameCode="SA"
+                        app:ccp_countryPreference="SA,AE,KW,BH"
+                        app:ccp_showFullName="true"
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_showNameCode="false"
+                        app:ccp_textGravity="RIGHT"
+                        android:layout_centerVertical="true"
+                        app:ccpDialog_searchEditTextTint="@color/gray1">
+                    </com.hbb20.CountryCodePicker>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_searching_city"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <AutoCompleteTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/the_city"
+                        android:layout_marginEnd="20dp"
+                        android:layout_toStartOf="@+id/search"
+                        android:inputType="text"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"
+                        android:textSize="14sp"
+                        android:theme="@style/TextLabel_Black"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:id="@+id/input_city"/>
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/search"
+                        android:layout_alignBottom="@+id/search"
+                        android:layout_alignEnd="@+id/search"
+                        android:layout_alignStart="@+id/search"
+                        android:padding="2dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/border_square_entage_gray"
+                        android:theme="@style/ProgressBarColorBlack"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/search"
+                        android:layout_alignParentEnd="true"
+                        android:text="@string/search"
+                        android:textColor="@drawable/text_color_entage_gray_ops"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="50dp"
+                        android:paddingEnd="50dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:background="@drawable/border_square_entage_gray_ops"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text2"
+                        android:text="@string/personal_currency"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/currencies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/searchListSpeci"
+                        android:ems="10"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/text2"
+                        android:layout_marginStart="10dp">
+                    </AutoCompleteTextView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

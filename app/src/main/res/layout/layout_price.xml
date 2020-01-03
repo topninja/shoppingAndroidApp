@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_price">
+
+    <RelativeLayout
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/currencyExchange"
+        android:layout_toEndOf="@+id/currency"
+        android:layout_alignTop="@+id/currency"
+        android:layout_alignBottom="@+id/currency"
+        android:layout_marginStart="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="1dp"
+            android:id="@+id/line_currency"
+            android:src="@drawable/ic_arrow_circle"
+            android:tint="@color/entage_blue"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_currency_exchange"
+            android:tint="@color/entage_blue"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/price_item"
+        android:text=""
+        android:textColor="@color/entage_blue"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/price_item"
+        android:layout_alignTop="@+id/price_item"
+        android:layout_alignBottom="@+id/price_item"
+        android:id="@+id/currency"
+        android:text=""
+        android:gravity="bottom"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/entage_blue"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

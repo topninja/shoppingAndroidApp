@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:clickable="false"
+    android:background="@drawable/background_white_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_list_chats"
+        android:visibility="gone"
+        android:text=""
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:textColor="@drawable/text_color_entage_gray"
+        android:background="@drawable/border_curve_gray1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/border_curve_gray1"
+        android:paddingBottom="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/edit_data_order"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center"
+            android:background="@drawable/border_curve_side_top_entgae_blue_1_ops"
+            android:backgroundTint="@color/gray1"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progress_text"
+            android:layout_below="@+id/text1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:theme="@style/ProgressBarColorGray1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:layout_below="@+id/text1"
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:gravity="start"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout"
+            android:layout_marginBottom="20dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:visibility="visible"
+            android:layout_below="@+id/text"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/gray0"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text2"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:gravity="start"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/container">
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="@color/gray0"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/agree_and_pay"
+                android:layout_marginTop="5dp"
+                android:background="@color/grayBG"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_edit"
+                    android:tint="@color/white"
+                    android:padding="12dp"
+                    android:background="@color/gray1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/agree_to_edit_data_order"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/refuse_to_pay"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/background_white_gray"
+                android:layout_gravity="center_horizontal"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/refuse_to_pay1"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    android:textColor="@color/black"
+                    android:gravity="start"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/refuse_to_edit_data_order"
+                    android:lineSpacingExtra="2dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_below="@+id/refuse_to_pay1"
+                    android:layout_alignEnd="@+id/refuse_to_pay1"
+                    android:layout_alignStart="@+id/refuse_to_pay1"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:text=""
+            android:textSize="10sp"
+            android:textColor="@color/black"
+            android:visibility="visible"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/relLayoutDone"
+            android:layout_alignParentBottom="true"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relLayoutDone"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:id="@+id/sent"
+                android:tint="@color/black"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_done"/>
+
+            <ProgressBar
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:id="@+id/progressBar"
+                android:visibility="visible"
+                android:padding="3dp"
+                android:theme="@style/ProgressBarColorGray1"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
